@@ -32,7 +32,7 @@
  * MAINTENANCE, SUPPORT, UPDATES, ENHANCEMENTS, OR MODIFICATIONS.
  */
 
-const BASE_URL="https://api.grip.caida.org/dev/json";
+const BASE_URL="http://ponza.cc.gatech.edu:8000/json";
 
 const TAGS_URL=`${BASE_URL}/tags`
 const ASNDROP_URL=`${BASE_URL}/asndrop`
