@@ -42,22 +42,22 @@ class CodeRepos extends React.Component {
             {
                 "name": "GRIP-API",
                 "desc": "GRIP REST API framework and companion commandline tool written in Rust",
-                "link": "https://github.com/CAIDA/grip-api",
+                "link": "https://github.com/InetIntel/grip-api",
             },
             {
                 "name": "GRIP-UI",
                 "desc": "GRIP front-end user interface using React",
-                "link": "https://github.com/CAIDA/grip-ui",
+                "link": "https://github.com/InetIntel/grip-ui",
             },
             {
                 "name": "GRIP-Core",
                 "desc": "GRIP core backend logic components written in Python",
-                "link": "https://github.com/CAIDA/grip-core",
+                "link": "https://github.com/InetIntel/grip-core",
             },
             {
                 "name": "GRIP-Tools",
                 "desc": "GRIP deployment and auxiliary scripts",
-                "link": "https://github.com/CAIDA/grip-tools",
+                "link": "https://github.com/InetIntel/grip-tools",
             },
             {
                 "name": "ROA-Collector",

@@ -38,6 +38,6 @@ const TAGS_URL=`${BASE_URL}/tags`
 const ASNDROP_URL=`${BASE_URL}/asndrop`
 const BLOCKLIST_URL=`${BASE_URL}/blocklist`
 
-const FEEDBACK_URL="https://api.grip.caida.org/dev/feedback"
+const FEEDBACK_URL="https://api.grip.inetintel.cc.gatech.edu/dev/feedback"
 
 export {BASE_URL, TAGS_URL, ASNDROP_URL, BLOCKLIST_URL, FEEDBACK_URL}
