@@ -44,16 +44,13 @@ import Footer from "./templates/footer";
 import CodeRepos from "./pages/repos";
 import Acknowledgement from "./pages/ack";
 import Methodology from "./pages/method";
-import { useAuth0 } from '@auth0/auth0-react';
-import {Auth0ProviderWithHistory} from "./components/auth/provider";
-import {LogoutHandler} from "./components/auth/login-logout";
 
 const App = () => {
-    const { isLoading } = useAuth0();
+    // const { isLoading } = useAuth0();
 
-    if (isLoading) {
-        return <div>Loading...</div>;
-    }
+    // if (isLoading) {
+    //     return <div>Loading...</div>;
+    // }
 
     return <React.Fragment>
         <Nav/>
@@ -65,7 +62,6 @@ const App = () => {
             <Route path='/repos' component={CodeRepos}/>
             <Route path='/ack' component={Acknowledgement}/>
             <Route path='/tags' component={EventTags}/>
-            <Route path='/logout' component={LogoutHandler}/>
             <Route path='/' component={EventsList}/>
         </Switch>
         <Footer/>
@@ -76,9 +72,7 @@ class HijacksApp extends React.Component {
 
     render() {
         return <BrowserRouter>
-            <Auth0ProviderWithHistory>
                 <App/>
-            </Auth0ProviderWithHistory>
         </BrowserRouter>;
     }
 }

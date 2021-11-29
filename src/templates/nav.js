@@ -34,7 +34,6 @@
 
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import {LoginNav} from "../components/auth/login-logout";
 
 class Nav extends Component {
     constructor(props) {
