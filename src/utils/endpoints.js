@@ -32,12 +32,12 @@
  * MAINTENANCE, SUPPORT, UPDATES, ENHANCEMENTS, OR MODIFICATIONS.
  */
 
-const BASE_URL="http://ponza.cc.gatech.edu:8000/json";
+const BASE_URL="http://api.grip.inetintel.org:80/json";
 
 const TAGS_URL=`${BASE_URL}/tags`
 const ASNDROP_URL=`${BASE_URL}/asndrop`
 const BLOCKLIST_URL=`${BASE_URL}/blocklist`
 
-const FEEDBACK_URL="https://api.grip.inetintel.cc.gatech.edu/dev/feedback"
+const FEEDBACK_URL="http://api.grip.inetintel.org/dev/feedback"
 
 export {BASE_URL, TAGS_URL, ASNDROP_URL, BLOCKLIST_URL, FEEDBACK_URL}

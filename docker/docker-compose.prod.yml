@@ -7,4 +7,4 @@ services:
       context: ..
       dockerfile: docker/Dockerfile.prod
     ports:
-      - 1235:80
+      - 80:80
