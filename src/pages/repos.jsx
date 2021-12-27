@@ -70,6 +70,11 @@ class CodeRepos extends React.Component {
                 "link": "https://github.com/CAIDA/bgpview",
             },
             {
+                "name": "BGPView Sync Server",
+                "desc": "Implements BGPView IO support for Kafka",
+                "link": "https://github.com/CAIDA/pybgpview-io-kafka",
+            },
+            {
                 "name": "BGPStream",
                 "desc": "The CAIDA BGPStream software framework",
                 "link": "https://bgpstream.caida.org",
