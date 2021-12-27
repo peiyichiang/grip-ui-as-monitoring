@@ -44,6 +44,7 @@ import Footer from "./templates/footer";
 import CodeRepos from "./pages/repos";
 import Acknowledgement from "./pages/ack";
 import Methodology from "./pages/method";
+import Contacts from "./pages/contacts";
 
 const App = () => {
     // const { isLoading } = useAuth0();
@@ -61,6 +62,7 @@ const App = () => {
             <Route path='/method' component={Methodology}/>
             <Route path='/repos' component={CodeRepos}/>
             <Route path='/ack' component={Acknowledgement}/>
+            <Route path='/contacts' component={Contacts}/>
             <Route path='/tags' component={EventTags}/>
             <Route path='/' component={EventsList}/>
         </Switch>

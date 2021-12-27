@@ -65,12 +65,17 @@ class Nav extends Component {
                             </li>
                             <li className="header__item">
                                 <a href="/ack" className="header__link">
-                                    Acknowledgement
+                                    Acknowledgements
                                 </a>
                             </li>
                             <li className="header__item">
                                 <a href="/method" className="header__link">
                                     Methodology
+                                </a>
+                            </li>
+                            <li className="header__item">
+                                <a href="/contacts" className="header__link">
+                                    Contacts
                                 </a>
                             </li>
 

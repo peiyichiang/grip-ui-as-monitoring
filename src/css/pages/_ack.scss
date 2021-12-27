@@ -55,6 +55,11 @@
     &-icon {
       max-width: 18rem;
       max-height: 15rem;
+
+      &--gatech {
+      max-width: 28rem !important;
+      max-height: 25rem !important;
+      }
     }
   }
 
