@@ -80,6 +80,16 @@ class CodeRepos extends React.Component {
                 "link": "https://bgpstream.caida.org",
             },
             {
+                "name": "LibIPMeta",
+                "desc": "IP metadata lookup library",
+                "link": "https://github.com/CAIDA/libipmeta",
+            },
+            {
+                "name": "Python bindings for LibIPMeta",
+                "desc": "Python bindings for libipmeta",
+                "link": "https://github.com/CAIDA/pyipmeta",
+            },
+            {
                 "name": "PyWandio",
                 "desc": "Generic data IO library in Python",
                 "link": "https://github.com/CAIDA/pywandio",
