@@ -49,12 +49,12 @@ class Card extends React.Component {
         "caida":{
             "image": <img src={caidaLogo} className="card__logo-icon"/>,
             "link": "https://www.caida.org",
-            "desc": "Before transitioning to Georgia Tech, this project was originally developed at CAIDA, UC San Diego."
+            "desc": "This project was originally developed at CAIDA, UC San Diego."
         },
         "ucsd":{
             "image": <img src={ucsdLogo} className="card__logo-icon"/>,
             "link": "https://www.ucsd.edu",
-            "desc": "Before transitioning to Georgia Tech, this project was originally developed at CAIDA, UC San Diego."
+            "desc": "This project was originally developed at CAIDA, UC San Diego."
         },
         "nsf":{
             "image": <img src={nsfLogo} className="card__logo-icon"/>,
