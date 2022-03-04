@@ -59,7 +59,7 @@ class Methodology extends React.Component {
             },
         ];
         return <div id='hijacks' className='container-fluid subpage'>
-            <div className="repos">
+            <div className="methodology">
 
                 <div className="row partners">
                     <div className="col-1-of-1">

@@ -35,15 +35,27 @@
 import React from 'react';
 
 // Logos
+import caidaLogo from '../images/logos/caida.png';
 import xsedeLogo from '../images/logos/xsede-black.png';
 import sdscLogo from '../images/logos/sdsc.svg';
 import ucsdLogo from '../images/logos/ucsd.svg';
 import nsfLogo from '../images/logos/nsf.svg';
 import isocLogo from '../images/logos/isoc.svg';
 import ripeLogo from '../images/logos/ripencc.svg';
+import gatechcocLogo from '../images/logos/gatech_coc.svg';
 
 class Card extends React.Component {
     orgs = {
+        "caida":{
+            "image": <img src={caidaLogo} className="card__logo-icon"/>,
+            "link": "https://www.caida.org",
+            "desc": "This project was originally developed at CAIDA, UC San Diego."
+        },
+        "ucsd":{
+            "image": <img src={ucsdLogo} className="card__logo-icon"/>,
+            "link": "https://www.ucsd.edu",
+            "desc": "This project was originally developed at CAIDA, UC San Diego."
+        },
         "nsf":{
             "image": <img src={nsfLogo} className="card__logo-icon"/>,
             "link": "https://www.caida.org/funding/hijacks/",
@@ -53,23 +65,28 @@ class Card extends React.Component {
         "ripe":{
             "image": <img src={ripeLogo} className="card__logo-icon"/>,
             "link": "https://www.ripe.net/support/cpf/funding-recipients-2020",
-            "desc": "RIPE Community Projects Fund for 2020: BGP Hijacking Observatory",
+            "desc": "RIPE Community Projects Fund for 2020: BGP Hijacking Observatory"
         },
         "sdsc":{
             "image": <img src={sdscLogo} className="card__logo-icon"/>,
             "link": "https://www.sdsc.edu",
-            "desc": "San Diego Super Computer Center",
+            "desc": "The San Diego Super Computer Center originally hosted the project and provided infrastructure."
         },
         "xsede":{
             "image": <img src={xsedeLogo} className="card__logo-icon"/>,
             "link": "https://www.xsede.org",
-            "desc": "The Extreme Science and Engineering Discovery Environment (XSEDE) ",
+            "desc": "The Extreme Science and Engineering Discovery Environment (XSEDE) provided computing infrastructure previously used by this project"
         },
         "isoc":{
             "image": <img src={isocLogo} className="card__logo-icon"/>,
             "link": "https://www.internetsociety.org",
-            "desc": "Internet Society",
+            "desc": "The Internet Society has supported this project."
         },
+        "gatechcoc":{
+            "image": <img src={gatechcocLogo} className="card__logo-icon card__logo-icon--gatech"/>,
+            "link": "https://support.cc.gatech.edu",
+            "desc": "The Technology Services Organization (TSO) at Georgia Tech's College of Computing provides and manages computing infrastructure for this project."
+        }
     }
 
     render() {
@@ -100,7 +117,7 @@ class Acknowledgement extends React.Component {
             <div className="row partners">
                 <div className="col-1-of-1">
                     <h2 className="section-header">
-                        Acknowledgement
+                        Acknowledgements
                     </h2>
                 </div>
             </div>
@@ -112,7 +129,10 @@ class Acknowledgement extends React.Component {
                     <Card org="ripe"/>
                 </div>
                 <div className="col-1-of-3">
-                    <Card org="sdsc"/>
+                    <Card org="caida"/>
+                </div>
+                <div className="col-1-of-3">
+                    <Card org="ucsd"/>
                 </div>
             </div>
             <div className="row partners">
@@ -121,6 +141,12 @@ class Acknowledgement extends React.Component {
                 </div>
                 <div className="col-1-of-3">
                     <Card org="xsede"/>
+                </div>
+                <div className="col-1-of-3">
+                    <Card org="sdsc"/>
+                </div>
+                <div className="col-1-of-3">
+                    <Card org="gatechcoc"/>
                 </div>
             </div>
         </div>

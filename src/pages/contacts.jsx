@@ -1,0 +1,27 @@
+import React from 'react';
+import LinkA from "../utils/linka";
+
+class Contacts extends React.Component {
+
+    render() {
+        return <div id='hijacks' className='container-fluid subpage'>
+            <div className="contacts">
+                <div className="row partners">
+                    <div className="col-1-of-1">
+                        <h2 className="section-header">
+                            Contacts
+                        </h2>
+                    </div>
+                </div>
+                <div className="contacts_content">
+                    <h3>
+                        For info / feedback contact <a href={"https://www.cc.gatech.edu/~adainotti6/"}>Alberto
+                        Dainotti</a>
+                    </h3>
+                </div>
+            </div>
+        </div>
+    }
+}
+
+export default Contacts;
