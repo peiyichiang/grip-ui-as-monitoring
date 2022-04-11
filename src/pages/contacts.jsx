@@ -15,8 +15,7 @@ class Contacts extends React.Component {
                 </div>
                 <div className="contacts_content">
                     <h3>
-                        For info / feedback contact <a href={"https://www.cc.gatech.edu/~adainotti6/"}>Alberto
-                        Dainotti</a>
+                        For info / feedback contact grip-info AT cc.gatech.edu
                     </h3>
                 </div>
             </div>
