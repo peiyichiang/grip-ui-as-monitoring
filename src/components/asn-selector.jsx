@@ -57,7 +57,6 @@ class AsnSelector extends React.Component {
                            className="form-control search-bar__search-input"
                            placeholder="Search by ASN"
                            ref={this.textInput}
-                           defaultValue={"1234"}
                     />
                     <button className="btn btn-success" type="button" onClick={this._handleSearch}>Search</button>
                 </div>
