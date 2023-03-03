@@ -32,52 +32,38 @@
  * MAINTENANCE, SUPPORT, UPDATES, ENHANCEMENTS, OR MODIFICATIONS.
  */
 
-import React from "react";
-import EventTypeSelector from "./event-type-selector";
-import EventSuspicionSelector from "./event-suspicion-selector";
-import RangePicker from "./range-picker";
-import EventSearchBox from "./event-search-box";
-import AsnSelector from "./asn-selector";
+import React from 'react';
 
-class SearchBar extends React.Component {
+class AsnSelector extends React.Component {
 
-    constructor(props) {
+    constructor(props){
         super(props);
+        this.textInput = React.createRef();
     }
+
+    _handleSearch = () => {
+        let pathAsn = this.textInput.current.value;
+        this.props.onSearch(pathAsn);
+    };
 
     render() {
         return (
-            <div className="row search-bar">
-                <EventTypeSelector eventType={this.props.query.eventType}
-                                   onChange={this.props.onEventTypeChange}
-                />
-
-                <EventSuspicionSelector eventSuspicionLevel={this.props.query.suspicionLevel}
-                                   onChange={this.props.onEventSuspicionChange}
-                />
-
-                <RangePicker
-                    startDate={this.props.query.startTime}
-                    endDate={this.props.query.endTime}
-                    onApply={this.props.onTimeChange}
-                />
-
-                <AsnSelector
-                    pathAsn={this.props.query.pathAsn}
-                    onSearch={this.props.onPathAsnSearch}
-                />
-
-                <EventSearchBox
-                    pfxs={this.props.query.pfxs}
-                    asns={this.props.query.asns}
-                    tags={this.props.query.tags}
-                    codes={this.props.query.codes}
-                    onSearch={this.props.onSearch}
-                />
-
+            <div className="input-group col-lg-3 search-bar__component">
+                <label className="search-bar__label">
+                    Search for a propagator (ASN)
+                </label>
+                <div className="search-bar__flex">
+                    <input type="text"
+                           className="form-control search-bar__search-input"
+                           placeholder="Search by ASN"
+                           ref={this.textInput}
+                           defaultValue={"1234"}
+                    />
+                    <button className="btn btn-success" type="button" onClick={this._handleSearch}>Search</button>
+                </div>
             </div>
-        );
+        )
     }
 }
 
-export default SearchBar;
+export default AsnSelector;

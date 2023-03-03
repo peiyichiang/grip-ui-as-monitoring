@@ -142,11 +142,12 @@ class SankeyGraph extends React.Component {
                     }
                 }
                 if (as1 === pathAsn || as2 === pathAsn) {
-                    resData.push([as1, as2, weight, style]);
-                    weight_sum += weight;
+                    style = "color:blue"
+                    // resData.push([as1, as2, weight, style]);
+                    // weight_sum += weight;
                 }
-                // resData.push([as1, as2, weight, style]);
-                // weight_sum += weight;
+                resData.push([as1, as2, weight, style]);
+                weight_sum += weight;
             }
         );
         return resData;
