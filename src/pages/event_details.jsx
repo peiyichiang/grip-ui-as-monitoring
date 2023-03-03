@@ -47,6 +47,7 @@ class EventDetails extends React.Component {
 
         this.eventId = this.props.match.params.eventId;
         this.eventType = this.eventId.split("-")[0];
+        this.pathAsn = this.props.match.params.pathAsn;
         this.jsonUrl = `${BASE_URL}/event/id/${this.eventId}`;
         this.tagsUrl = `${TAGS_URL}`;
 
@@ -61,6 +62,7 @@ class EventDetails extends React.Component {
     async componentDidMount() {
         this.loadEventData();
         this.loadTagsData();
+        // console.log(this.pathAsn);
     }
 
     async loadEventData() {
@@ -145,6 +147,7 @@ class EventDetails extends React.Component {
                                     eventType={this.eventType}
                                     isEventDetails={true}
                                     title={"Prefix Event List"}
+                                    pathAsn={this.pathAsn}
                     />
                 </div>
             </div>

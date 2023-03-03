@@ -47,6 +47,7 @@ class PfxEventDetails extends React.Component {
         super(props);
         this.eventId = this.props.match.params.eventId;
         this.fingerprint = this.props.match.params.pfxEventId;
+        this.pathAsn = this.props.match.params.pathAsn;
         this.eventType = this.eventId.split("-")[0];
         this.state = {
             eventData: {},
@@ -195,6 +196,7 @@ class PfxEventDetails extends React.Component {
                         highlights={[]}
                         benign_nodes={victims}
                         suspicious_nodes={attackers}
+                        pathAsn={this.pathAsn}
                     />
                     <SankeyGraph
                         data={this.state.superpaths}
@@ -203,6 +205,7 @@ class PfxEventDetails extends React.Component {
                         highlights={[]}
                         benign_nodes={victims}
                         suspicious_nodes={attackers}
+                        pathAsn={this.pathAsn}
                     />
                 </React.Fragment>
 
@@ -221,6 +224,7 @@ class PfxEventDetails extends React.Component {
                         id={"pfx_sankey"}
                         benign_nodes={victims}
                         suspicious_nodes={attackers}
+                        pathAsn={this.pathAsn}
                     />
                 </React.Fragment>
         }

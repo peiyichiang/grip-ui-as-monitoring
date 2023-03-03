@@ -215,6 +215,7 @@ class EventsTable extends React.Component {
             asns: [],
             tags: [],
             codes: [],
+            pathAsn: 0,
         };
 
         this._parseQueryString();
@@ -238,7 +239,7 @@ class EventsTable extends React.Component {
 
     _loadEventsData = async () => {
         let [min_susp, max_susp] = translate_suspicion_str_to_values(this.query.suspicionLevel);
-        console.log(min_susp, max_susp);
+        // console.log(min_susp, max_susp);
 
         let baseUrl = `${BASE_URL}/events?`;
         let params = new URLSearchParams();
@@ -274,13 +275,73 @@ class EventsTable extends React.Component {
 
         const response = await axios.get(url);
         let events = response.data.data;
+        let outputEvents = events;
+
+        // only display events that the asn is involved in the path
+        if (this.query.pathAsn!=="") {
+            outputEvents = [];
+            for (let i = 0; i < events.length; i++) {
+                let _relevantPaths = await this._loadEventData(events[i].id, this.query.pathAsn);
+                // console.log(events[i].id);
+                if (_relevantPaths.length > 0) {
+                    // console.log(_relevantPaths);
+                    outputEvents.push(events[i]);
+                    // console.log(events[i]);
+                }
+            }
+            // console.log(outputEvents.length);
+        }
+        console.log(outputEvents.length);
 
         this.setState({
-            events: events,
+            events: outputEvents,
             loadingEvents: false,
-            totalRows: response.data.recordsTotal,
+            // totalRows: response.data.recordsTotal,
+            totalRows: outputEvents.length,
         });
     };
+
+    _loadEventData = async(eventID, pathAsn) => {
+        let eventUrl = `https://api.grip.inetintel.cc.gatech.edu/json/event/id/${eventID}`;
+        const eventResponse = await axios.get(eventUrl);
+        let prefixes = eventResponse.data.summary.prefixes;
+        let _relevantPaths = [];
+        _relevantPaths = await this._loadPfxEventsData(prefixes, eventID, pathAsn);
+        // console.log(_relevantPaths);
+        return _relevantPaths;
+    }
+
+    _loadPfxEventsData = async(prefixes, eventID, pathAsn) => {
+        let _relevantPaths = [];
+        for (let i = 0; i < prefixes.length; i++) {
+            prefixes[i] = prefixes[i].split("/").join("-");
+            let pfxEventUrl = `https://api.grip.inetintel.cc.gatech.edu/json/pfx_event/id/${eventID}/${prefixes[i]}`;
+            const pfxEventResponse = await axios.get(pfxEventUrl);
+            let paths = pfxEventResponse.data.details.aspaths;
+            // console.log(paths);
+            let subpaths = paths.split(":").map(path => path.split(" "));
+            _relevantPaths = this._loadFilteredSubpaths(subpaths, pathAsn);
+        } 
+        return _relevantPaths;
+    }
+
+    _loadFilteredSubpaths = (subpaths, pathAsn) => {
+        let _relevantPaths = [];
+        if (pathAsn.toString() !== "0") {
+            for (let i = 0; i < subpaths.length; i++) {
+                // if the input AS number is in the hijacked path
+                for (let j = 0; j < subpaths[i].length; j++) {
+                    if (subpaths[i][j] === pathAsn) {
+                        _relevantPaths.push(subpaths[i]);
+                        // console.log(subpaths[i]);
+                        break;
+                    }
+                }
+            }
+        }
+        // console.log(_relevantPaths);
+        return _relevantPaths;
+    }
 
     /*
      *************************
@@ -301,7 +362,7 @@ class EventsTable extends React.Component {
 
     _handleTableRowClick = (row) => {
         // redirect to sub pages
-        window.open(`/events/${row.event_type}/${row.id}`, "_self");
+        window.open(`/events/${row.event_type}/${row.id}/${this.query.pathAsn}`, "_self");
     };
 
     /*
@@ -325,9 +386,14 @@ class EventsTable extends React.Component {
     };
 
     _handleSearchSuspicionChange = (suspicionLevel) => {
-        console.log(suspicionLevel);
+        // console.log(suspicionLevel);
         this.query.curPage = 0;
         this.query.suspicionLevel =  suspicionLevel;
+        this._loadEventsData();
+    };
+
+    _handlePathAsnSearch = (pathAsn) => {
+        this.query.pathAsn = pathAsn;
         this._loadEventsData();
     };
 
@@ -381,6 +447,9 @@ class EventsTable extends React.Component {
         if("ts_end" in parsed){
             this.query.endTime = this.parse_time(parsed.ts_end);
         }
+        if("pathAsn" in parsed){
+            this.query.pathAsn = parsed.pathAsn;
+        }
 
         this.query.suspicionLevel = translate_suspicion_values_to_str(this.query.min_susp, this.query.max_susp);
         [this.query.min_susp, this.query.max_susp] = translate_suspicion_str_to_values(this.query.suspicionLevel);
@@ -419,6 +488,7 @@ class EventsTable extends React.Component {
                     onTimeChange={this._handleSearchTimeChange}
                     onEventTypeChange={this._handleSearchEventTypeChange}
                     onEventSuspicionChange={this._handleSearchSuspicionChange}
+                    onPathAsnSearch={this._handlePathAsnSearch}
                     onSearch={this._handleSearchSearch}
                 />
 

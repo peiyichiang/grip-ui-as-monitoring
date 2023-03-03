@@ -1,0 +1,684 @@
+/*!
+ * This software is Copyright (c) 2015 The Regents of the University of
+ * California. All Rights Reserved. Permission to copy, modify, and distribute this
+ * software and its documentation for academic research and education purposes,
+ * without fee, and without a written agreement is hereby granted, provided that
+ * the above copyright notice, this paragraph and the following three paragraphs
+ * appear in all copies. Permission to make use of this software for other than
+ * academic research and education purposes may be obtained by contacting:
+ *
+ * Office of Innovation and Commercialization
+ * 9500 Gilman Drive, Mail Code 0910
+ * University of California
+ * La Jolla, CA 92093-0910
+ * (858) 534-5815
+ * invent@ucsd.edu
+ *
+ * This software program and documentation are copyrighted by The Regents of the
+ * University of California. The software program and documentation are supplied
+ * "as is", without any accompanying services from The Regents. The Regents does
+ * not warrant that the operation of the program will be uninterrupted or
+ * error-free. The end-user understands that the program was developed for research
+ * purposes and is advised not to rely exclusively on the program for any reason.
+ *
+ * IN NO EVENT SHALL THE UNIVERSITY OF CALIFORNIA BE LIABLE TO ANY PARTY FOR
+ * DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES, INCLUDING LOST
+ * PROFITS, ARISING OUT OF THE USE OF THIS SOFTWARE AND ITS DOCUMENTATION, EVEN IF
+ * THE UNIVERSITY OF CALIFORNIA HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH
+ * DAMAGE. THE UNIVERSITY OF CALIFORNIA SPECIFICALLY DISCLAIMS ANY WARRANTIES,
+ * INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND
+ * FITNESS FOR A PARTICULAR PURPOSE. THE SOFTWARE PROVIDED HEREUNDER IS ON AN "AS
+ * IS" BASIS, AND THE UNIVERSITY OF CALIFORNIA HAS NO OBLIGATIONS TO PROVIDE
+ * MAINTENANCE, SUPPORT, UPDATES, ENHANCEMENTS, OR MODIFICATIONS.
+ */
+/*!
+ * This software is Copyright (c) 2015 The Regents of the University of
+ * California. All Rights Reserved. Permission to copy, modify, and distribute this
+ * software and its documentation for academic research and education purposes,
+ * without fee, and without a written agreement is hereby granted, provided that
+ * the above copyright notice, this paragraph and the following three paragraphs
+ * appear in all copies. Permission to make use of this software for other than
+ * academic research and education purposes may be obtained by contacting:
+ *
+ * Office of Innovation and Commercialization
+ * 9500 Gilman Drive, Mail Code 0910
+ * University of California
+ * La Jolla, CA 92093-0910
+ * (858) 534-5815
+ * invent@ucsd.edu
+ *
+ * This software program and documentation are copyrighted by The Regents of the
+ * University of California. The software program and documentation are supplied
+ * "as is", without any accompanying services from The Regents. The Regents does
+ * not warrant that the operation of the program will be uninterrupted or
+ * error-free. The end-user understands that the program was developed for research
+ * purposes and is advised not to rely exclusively on the program for any reason.
+ *
+ * IN NO EVENT SHALL THE UNIVERSITY OF CALIFORNIA BE LIABLE TO ANY PARTY FOR
+ * DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES, INCLUDING LOST
+ * PROFITS, ARISING OUT OF THE USE OF THIS SOFTWARE AND ITS DOCUMENTATION, EVEN IF
+ * THE UNIVERSITY OF CALIFORNIA HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH
+ * DAMAGE. THE UNIVERSITY OF CALIFORNIA SPECIFICALLY DISCLAIMS ANY WARRANTIES,
+ * INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND
+ * FITNESS FOR A PARTICULAR PURPOSE. THE SOFTWARE PROVIDED HEREUNDER IS ON AN "AS
+ * IS" BASIS, AND THE UNIVERSITY OF CALIFORNIA HAS NO OBLIGATIONS TO PROVIDE
+ * MAINTENANCE, SUPPORT, UPDATES, ENHANCEMENTS, OR MODIFICATIONS.
+ */
+/*!
+ * This software is Copyright (c) 2015 The Regents of the University of
+ * California. All Rights Reserved. Permission to copy, modify, and distribute this
+ * software and its documentation for academic research and education purposes,
+ * without fee, and without a written agreement is hereby granted, provided that
+ * the above copyright notice, this paragraph and the following three paragraphs
+ * appear in all copies. Permission to make use of this software for other than
+ * academic research and education purposes may be obtained by contacting:
+ *
+ * Office of Innovation and Commercialization
+ * 9500 Gilman Drive, Mail Code 0910
+ * University of California
+ * La Jolla, CA 92093-0910
+ * (858) 534-5815
+ * invent@ucsd.edu
+ *
+ * This software program and documentation are copyrighted by The Regents of the
+ * University of California. The software program and documentation are supplied
+ * "as is", without any accompanying services from The Regents. The Regents does
+ * not warrant that the operation of the program will be uninterrupted or
+ * error-free. The end-user understands that the program was developed for research
+ * purposes and is advised not to rely exclusively on the program for any reason.
+ *
+ * IN NO EVENT SHALL THE UNIVERSITY OF CALIFORNIA BE LIABLE TO ANY PARTY FOR
+ * DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES, INCLUDING LOST
+ * PROFITS, ARISING OUT OF THE USE OF THIS SOFTWARE AND ITS DOCUMENTATION, EVEN IF
+ * THE UNIVERSITY OF CALIFORNIA HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH
+ * DAMAGE. THE UNIVERSITY OF CALIFORNIA SPECIFICALLY DISCLAIMS ANY WARRANTIES,
+ * INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND
+ * FITNESS FOR A PARTICULAR PURPOSE. THE SOFTWARE PROVIDED HEREUNDER IS ON AN "AS
+ * IS" BASIS, AND THE UNIVERSITY OF CALIFORNIA HAS NO OBLIGATIONS TO PROVIDE
+ * MAINTENANCE, SUPPORT, UPDATES, ENHANCEMENTS, OR MODIFICATIONS.
+ */
+/*
+0 - 480px:			Phone
+481px - 1024px:		Tablet Portrait
+1025px - 1280px:	Tablet Landscape
+1281px - 1799px:	Desktop (normal styles apply)
+1800px + : 			Big Desktop
+
+$breakpoint Argument Choices:
+- phone-sm
+- phone
+- phone-md
+- phone-log
+- tab-port
+- tab-land
+- big-desktop
+*/
+/*!
+ * This software is Copyright (c) 2015 The Regents of the University of
+ * California. All Rights Reserved. Permission to copy, modify, and distribute this
+ * software and its documentation for academic research and education purposes,
+ * without fee, and without a written agreement is hereby granted, provided that
+ * the above copyright notice, this paragraph and the following three paragraphs
+ * appear in all copies. Permission to make use of this software for other than
+ * academic research and education purposes may be obtained by contacting:
+ *
+ * Office of Innovation and Commercialization
+ * 9500 Gilman Drive, Mail Code 0910
+ * University of California
+ * La Jolla, CA 92093-0910
+ * (858) 534-5815
+ * invent@ucsd.edu
+ *
+ * This software program and documentation are copyrighted by The Regents of the
+ * University of California. The software program and documentation are supplied
+ * "as is", without any accompanying services from The Regents. The Regents does
+ * not warrant that the operation of the program will be uninterrupted or
+ * error-free. The end-user understands that the program was developed for research
+ * purposes and is advised not to rely exclusively on the program for any reason.
+ *
+ * IN NO EVENT SHALL THE UNIVERSITY OF CALIFORNIA BE LIABLE TO ANY PARTY FOR
+ * DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES, INCLUDING LOST
+ * PROFITS, ARISING OUT OF THE USE OF THIS SOFTWARE AND ITS DOCUMENTATION, EVEN IF
+ * THE UNIVERSITY OF CALIFORNIA HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH
+ * DAMAGE. THE UNIVERSITY OF CALIFORNIA SPECIFICALLY DISCLAIMS ANY WARRANTIES,
+ * INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND
+ * FITNESS FOR A PARTICULAR PURPOSE. THE SOFTWARE PROVIDED HEREUNDER IS ON AN "AS
+ * IS" BASIS, AND THE UNIVERSITY OF CALIFORNIA HAS NO OBLIGATIONS TO PROVIDE
+ * MAINTENANCE, SUPPORT, UPDATES, ENHANCEMENTS, OR MODIFICATIONS.
+ */
+/*!
+ * This software is Copyright (c) 2015 The Regents of the University of
+ * California. All Rights Reserved. Permission to copy, modify, and distribute this
+ * software and its documentation for academic research and education purposes,
+ * without fee, and without a written agreement is hereby granted, provided that
+ * the above copyright notice, this paragraph and the following three paragraphs
+ * appear in all copies. Permission to make use of this software for other than
+ * academic research and education purposes may be obtained by contacting:
+ *
+ * Office of Innovation and Commercialization
+ * 9500 Gilman Drive, Mail Code 0910
+ * University of California
+ * La Jolla, CA 92093-0910
+ * (858) 534-5815
+ * invent@ucsd.edu
+ *
+ * This software program and documentation are copyrighted by The Regents of the
+ * University of California. The software program and documentation are supplied
+ * "as is", without any accompanying services from The Regents. The Regents does
+ * not warrant that the operation of the program will be uninterrupted or
+ * error-free. The end-user understands that the program was developed for research
+ * purposes and is advised not to rely exclusively on the program for any reason.
+ *
+ * IN NO EVENT SHALL THE UNIVERSITY OF CALIFORNIA BE LIABLE TO ANY PARTY FOR
+ * DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES, INCLUDING LOST
+ * PROFITS, ARISING OUT OF THE USE OF THIS SOFTWARE AND ITS DOCUMENTATION, EVEN IF
+ * THE UNIVERSITY OF CALIFORNIA HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH
+ * DAMAGE. THE UNIVERSITY OF CALIFORNIA SPECIFICALLY DISCLAIMS ANY WARRANTIES,
+ * INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND
+ * FITNESS FOR A PARTICULAR PURPOSE. THE SOFTWARE PROVIDED HEREUNDER IS ON AN "AS
+ * IS" BASIS, AND THE UNIVERSITY OF CALIFORNIA HAS NO OBLIGATIONS TO PROVIDE
+ * MAINTENANCE, SUPPORT, UPDATES, ENHANCEMENTS, OR MODIFICATIONS.
+ */
+.footer {
+  filter: drop-shadow(0.5rem 0.5rem 0.5rem #222);
+  background-color: #2c3e50;
+  color: #fff;
+  height: auto;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center; }
+  .footer .row {
+    max-width: 114rem; }
+  .footer__logos {
+    padding: 3.5rem 0;
+    display: flex;
+    justify-content: center; }
+    @media only screen and (max-width: 46em) {
+      .footer__logos {
+        flex-direction: column;
+        padding: 5.5rem 0 1.5rem; } }
+    .footer__logos-item {
+      height: 3rem;
+      width: 15rem;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      @media only screen and (max-width: 46em) {
+        .footer__logos-item--gatech {
+          margin-bottom: 4rem !important; } }
+      .footer__logos-item--gatech img {
+        height: 6rem !important;
+        width: auto !important; }
+      .footer__logos-item img {
+        height: auto;
+        width: 100%; }
+      .footer__logos-item:not(:last-child) {
+        margin-right: 7rem; }
+        @media only screen and (max-width: 46em) {
+          .footer__logos-item:not(:last-child) {
+            margin-right: 0;
+            margin-bottom: 1.5rem; } }
+
+/*!
+ * This software is Copyright (c) 2015 The Regents of the University of
+ * California. All Rights Reserved. Permission to copy, modify, and distribute this
+ * software and its documentation for academic research and education purposes,
+ * without fee, and without a written agreement is hereby granted, provided that
+ * the above copyright notice, this paragraph and the following three paragraphs
+ * appear in all copies. Permission to make use of this software for other than
+ * academic research and education purposes may be obtained by contacting:
+ *
+ * Office of Innovation and Commercialization
+ * 9500 Gilman Drive, Mail Code 0910
+ * University of California
+ * La Jolla, CA 92093-0910
+ * (858) 534-5815
+ * invent@ucsd.edu
+ *
+ * This software program and documentation are copyrighted by The Regents of the
+ * University of California. The software program and documentation are supplied
+ * "as is", without any accompanying services from The Regents. The Regents does
+ * not warrant that the operation of the program will be uninterrupted or
+ * error-free. The end-user understands that the program was developed for research
+ * purposes and is advised not to rely exclusively on the program for any reason.
+ *
+ * IN NO EVENT SHALL THE UNIVERSITY OF CALIFORNIA BE LIABLE TO ANY PARTY FOR
+ * DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES, INCLUDING LOST
+ * PROFITS, ARISING OUT OF THE USE OF THIS SOFTWARE AND ITS DOCUMENTATION, EVEN IF
+ * THE UNIVERSITY OF CALIFORNIA HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH
+ * DAMAGE. THE UNIVERSITY OF CALIFORNIA SPECIFICALLY DISCLAIMS ANY WARRANTIES,
+ * INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND
+ * FITNESS FOR A PARTICULAR PURPOSE. THE SOFTWARE PROVIDED HEREUNDER IS ON AN "AS
+ * IS" BASIS, AND THE UNIVERSITY OF CALIFORNIA HAS NO OBLIGATIONS TO PROVIDE
+ * MAINTENANCE, SUPPORT, UPDATES, ENHANCEMENTS, OR MODIFICATIONS.
+ */
+.header {
+  width: 100%;
+  background-color: #2c3e50;
+  box-shadow: 0 1px 2px #9F9D9D;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  height: 5rem; }
+  .header__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    max-width: 114rem;
+    width: 100%;
+    height: auto; }
+    @media only screen and (max-width: 40em) {
+      .header__container {
+        display: flex;
+        justify-content: space-between; } }
+  .header__logo {
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+    overflow: hidden; }
+    .header__logo a {
+      display: block; }
+      .header__logo a img {
+        height: 3.5rem; }
+  .header__nav {
+    position: relative;
+    z-index: 10; }
+    .header__nav--mobile {
+      display: none; }
+  .header__list {
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    font-family: "Lato", sans-serif;
+    font-size: 1.4rem;
+    text-transform: capitalize;
+    height: 100%;
+    margin: 0; }
+  .header__item {
+    width: 18rem;
+    list-style-type: none;
+    height: auto;
+    display: flex; }
+    .header__item__right {
+      margin-left: 5rem; }
+  .header__link:link, .header__link:visited {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    color: #fff;
+    text-decoration: none; }
+    @media only screen and (max-width: 40em) {
+      .header__link:link, .header__link:visited {
+        padding-right: 4.5rem;
+        justify-content: flex-end; } }
+    .header__link:link:hover, .header__link:visited:hover {
+      text-decoration: none;
+      color: #fff;
+      background-color: #2c3e50; }
+
+/*!
+ * This software is Copyright (c) 2015 The Regents of the University of
+ * California. All Rights Reserved. Permission to copy, modify, and distribute this
+ * software and its documentation for academic research and education purposes,
+ * without fee, and without a written agreement is hereby granted, provided that
+ * the above copyright notice, this paragraph and the following three paragraphs
+ * appear in all copies. Permission to make use of this software for other than
+ * academic research and education purposes may be obtained by contacting:
+ *
+ * Office of Innovation and Commercialization
+ * 9500 Gilman Drive, Mail Code 0910
+ * University of California
+ * La Jolla, CA 92093-0910
+ * (858) 534-5815
+ * invent@ucsd.edu
+ *
+ * This software program and documentation are copyrighted by The Regents of the
+ * University of California. The software program and documentation are supplied
+ * "as is", without any accompanying services from The Regents. The Regents does
+ * not warrant that the operation of the program will be uninterrupted or
+ * error-free. The end-user understands that the program was developed for research
+ * purposes and is advised not to rely exclusively on the program for any reason.
+ *
+ * IN NO EVENT SHALL THE UNIVERSITY OF CALIFORNIA BE LIABLE TO ANY PARTY FOR
+ * DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES, INCLUDING LOST
+ * PROFITS, ARISING OUT OF THE USE OF THIS SOFTWARE AND ITS DOCUMENTATION, EVEN IF
+ * THE UNIVERSITY OF CALIFORNIA HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH
+ * DAMAGE. THE UNIVERSITY OF CALIFORNIA SPECIFICALLY DISCLAIMS ANY WARRANTIES,
+ * INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND
+ * FITNESS FOR A PARTICULAR PURPOSE. THE SOFTWARE PROVIDED HEREUNDER IS ON AN "AS
+ * IS" BASIS, AND THE UNIVERSITY OF CALIFORNIA HAS NO OBLIGATIONS TO PROVIDE
+ * MAINTENANCE, SUPPORT, UPDATES, ENHANCEMENTS, OR MODIFICATIONS.
+ */
+body {
+  width: 100%; }
+
+#hijacks {
+  width: 100%;
+  padding-left: 4rem;
+  padding-right: 4rem; }
+
+.subpage .page-header {
+  margin-top: 2rem;
+  padding-left: 0;
+  padding-right: 0; }
+
+/*!
+ * This software is Copyright (c) 2015 The Regents of the University of
+ * California. All Rights Reserved. Permission to copy, modify, and distribute this
+ * software and its documentation for academic research and education purposes,
+ * without fee, and without a written agreement is hereby granted, provided that
+ * the above copyright notice, this paragraph and the following three paragraphs
+ * appear in all copies. Permission to make use of this software for other than
+ * academic research and education purposes may be obtained by contacting:
+ *
+ * Office of Innovation and Commercialization
+ * 9500 Gilman Drive, Mail Code 0910
+ * University of California
+ * La Jolla, CA 92093-0910
+ * (858) 534-5815
+ * invent@ucsd.edu
+ *
+ * This software program and documentation are copyrighted by The Regents of the
+ * University of California. The software program and documentation are supplied
+ * "as is", without any accompanying services from The Regents. The Regents does
+ * not warrant that the operation of the program will be uninterrupted or
+ * error-free. The end-user understands that the program was developed for research
+ * purposes and is advised not to rely exclusively on the program for any reason.
+ *
+ * IN NO EVENT SHALL THE UNIVERSITY OF CALIFORNIA BE LIABLE TO ANY PARTY FOR
+ * DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES, INCLUDING LOST
+ * PROFITS, ARISING OUT OF THE USE OF THIS SOFTWARE AND ITS DOCUMENTATION, EVEN IF
+ * THE UNIVERSITY OF CALIFORNIA HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH
+ * DAMAGE. THE UNIVERSITY OF CALIFORNIA SPECIFICALLY DISCLAIMS ANY WARRANTIES,
+ * INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND
+ * FITNESS FOR A PARTICULAR PURPOSE. THE SOFTWARE PROVIDED HEREUNDER IS ON AN "AS
+ * IS" BASIS, AND THE UNIVERSITY OF CALIFORNIA HAS NO OBLIGATIONS TO PROVIDE
+ * MAINTENANCE, SUPPORT, UPDATES, ENHANCEMENTS, OR MODIFICATIONS.
+ */
+.card {
+  background-color: #fff;
+  box-shadow: 0 1px 2px #9F9D9D;
+  border-radius: 0.5rem;
+  padding: 0 2rem 2rem;
+  height: 25rem;
+  width: 25rem; }
+  .card__link {
+    color: #000;
+    text-decoration: none; }
+  .card__logo {
+    height: 18rem;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .card__logo-icon {
+      max-width: 18rem;
+      max-height: 15rem; }
+      .card__logo-icon--gatech {
+        max-width: 28rem !important;
+        max-height: 25rem !important; }
+  .card__content {
+    font-size: 1.2rem;
+    text-align: center; }
+    @media only screen and (max-width: 64em) {
+      .card__content {
+        height: 15rem;
+        text-align: center;
+        font-size: 1.3rem; } }
+    @media only screen and (max-width: 40em) {
+      .card__content {
+        height: auto; } }
+    .card__content-link:link, .card__content-link:visited {
+      color: #5899AE;
+      font-weight: 700;
+      text-decoration: none;
+      padding-bottom: 2px;
+      margin-bottom: 1px;
+      background: linear-gradient(175deg, #7FB7CA 0%, #7FB7CA 33.3%, #5899AE 83.5%, #286F86 100%) left bottom transparent no-repeat;
+      background-size: 100% 0;
+      /* controls underline thickness */
+      transition: ease-in-out 0.3s; }
+      .card__content-link:link:hover, .card__content-link:visited:hover {
+        background-size: 100% 2px; }
+
+.partners {
+  margin-top: 2rem; }
+  .partners .col-1-of-1 {
+    display: flex; }
+  .partners .col-1-of-3 {
+    justify-content: center;
+    margin-bottom: 2rem;
+    padding: 0 2rem 2rem; }
+    .partners .col-1-of-3:nth-child(3n - 2) {
+      margin-right: 0; }
+      @media only screen and (max-width: 64em) {
+        .partners .col-1-of-3:nth-child(3n - 2) {
+          margin-right: 2.5rem; } }
+    @media only screen and (max-width: 64em) {
+      .partners .col-1-of-3 {
+        width: calc(50% - 2.5rem) !important; } }
+    @media only screen and (max-width: 40em) {
+      .partners .col-1-of-3 {
+        width: 100% !important; } }
+  .partners .section-header {
+    margin-bottom: 2rem; }
+
+/*!
+ * This software is Copyright (c) 2015 The Regents of the University of
+ * California. All Rights Reserved. Permission to copy, modify, and distribute this
+ * software and its documentation for academic research and education purposes,
+ * without fee, and without a written agreement is hereby granted, provided that
+ * the above copyright notice, this paragraph and the following three paragraphs
+ * appear in all copies. Permission to make use of this software for other than
+ * academic research and education purposes may be obtained by contacting:
+ *
+ * Office of Innovation and Commercialization
+ * 9500 Gilman Drive, Mail Code 0910
+ * University of California
+ * La Jolla, CA 92093-0910
+ * (858) 534-5815
+ * invent@ucsd.edu
+ *
+ * This software program and documentation are copyrighted by The Regents of the
+ * University of California. The software program and documentation are supplied
+ * "as is", without any accompanying services from The Regents. The Regents does
+ * not warrant that the operation of the program will be uninterrupted or
+ * error-free. The end-user understands that the program was developed for research
+ * purposes and is advised not to rely exclusively on the program for any reason.
+ *
+ * IN NO EVENT SHALL THE UNIVERSITY OF CALIFORNIA BE LIABLE TO ANY PARTY FOR
+ * DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES, INCLUDING LOST
+ * PROFITS, ARISING OUT OF THE USE OF THIS SOFTWARE AND ITS DOCUMENTATION, EVEN IF
+ * THE UNIVERSITY OF CALIFORNIA HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH
+ * DAMAGE. THE UNIVERSITY OF CALIFORNIA SPECIFICALLY DISCLAIMS ANY WARRANTIES,
+ * INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND
+ * FITNESS FOR A PARTICULAR PURPOSE. THE SOFTWARE PROVIDED HEREUNDER IS ON AN "AS
+ * IS" BASIS, AND THE UNIVERSITY OF CALIFORNIA HAS NO OBLIGATIONS TO PROVIDE
+ * MAINTENANCE, SUPPORT, UPDATES, ENHANCEMENTS, OR MODIFICATIONS.
+ */
+/*
+SEARCH BAR
+ */
+.search-bar {
+  display: flex;
+  font-size: 16px;
+  width: 100%; }
+
+.search-bar__component {
+  display: inline-block;
+  margin: 10px;
+  width: auto; }
+
+.search-bar__label {
+  display: block; }
+
+.search-bar__component {
+  display: inline-block;
+  margin: 5px;
+  width: auto; }
+
+.search-bar__label {
+  display: block; }
+
+.search-bar__time {
+  width: 500px;
+  display: flex;
+  justify-content: space-between; }
+
+.calendar-icon {
+  font-size: 15px;
+  margin: 5px; }
+
+.search-bar__flex {
+  display: flex; }
+
+.search-bar__time-input {
+  width: 380px; }
+
+.search-bar__time-icon {
+  margin-right: 10px; }
+
+.search-bar__search-input {
+  width: 80% !important;
+  margin: 3px; }
+
+/*!
+ * This software is Copyright (c) 2015 The Regents of the University of
+ * California. All Rights Reserved. Permission to copy, modify, and distribute this
+ * software and its documentation for academic research and education purposes,
+ * without fee, and without a written agreement is hereby granted, provided that
+ * the above copyright notice, this paragraph and the following three paragraphs
+ * appear in all copies. Permission to make use of this software for other than
+ * academic research and education purposes may be obtained by contacting:
+ *
+ * Office of Innovation and Commercialization
+ * 9500 Gilman Drive, Mail Code 0910
+ * University of California
+ * La Jolla, CA 92093-0910
+ * (858) 534-5815
+ * invent@ucsd.edu
+ *
+ * This software program and documentation are copyrighted by The Regents of the
+ * University of California. The software program and documentation are supplied
+ * "as is", without any accompanying services from The Regents. The Regents does
+ * not warrant that the operation of the program will be uninterrupted or
+ * error-free. The end-user understands that the program was developed for research
+ * purposes and is advised not to rely exclusively on the program for any reason.
+ *
+ * IN NO EVENT SHALL THE UNIVERSITY OF CALIFORNIA BE LIABLE TO ANY PARTY FOR
+ * DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES, INCLUDING LOST
+ * PROFITS, ARISING OUT OF THE USE OF THIS SOFTWARE AND ITS DOCUMENTATION, EVEN IF
+ * THE UNIVERSITY OF CALIFORNIA HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH
+ * DAMAGE. THE UNIVERSITY OF CALIFORNIA SPECIFICALLY DISCLAIMS ANY WARRANTIES,
+ * INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND
+ * FITNESS FOR A PARTICULAR PURPOSE. THE SOFTWARE PROVIDED HEREUNDER IS ON AN "AS
+ * IS" BASIS, AND THE UNIVERSITY OF CALIFORNIA HAS NO OBLIGATIONS TO PROVIDE
+ * MAINTENANCE, SUPPORT, UPDATES, ENHANCEMENTS, OR MODIFICATIONS.
+ */
+body {
+  font-size: 14px !important; }
+
+#hijacks .grip-btn {
+  color: #333;
+  background-color: #fff;
+  border-color: #ccc;
+  margin-right: 0.5rem; }
+
+.btn {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px !important;
+  font-weight: 400;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-image: none;
+  border-radius: 4px; }
+
+.btn-group > .btn input[type="radio"] {
+  clip: rect(0, 0, 0, 0);
+  pointer-events: none; }
+
+.form-control {
+  font-size: 14px !important; }
+
+.badge {
+  font-size: 90% !important;
+  margin: 5px; }
+
+/*
+TAGS
+ */
+.tag-list {
+  margin: 5px; }
+
+.tag-label {
+  font-size: 100%;
+  display: inline-block;
+  -webkit-margin-end: 5px;
+          margin-inline-end: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px; }
+
+.asn__country {
+  white-space: nowrap; }
+
+.ipprefix__span {
+  margin-right: 5px; }
+
+.tag-icon {
+  margin-right: 5px; }
+
+/*!
+ * This software is Copyright (c) 2015 The Regents of the University of
+ * California. All Rights Reserved. Permission to copy, modify, and distribute this
+ * software and its documentation for academic research and education purposes,
+ * without fee, and without a written agreement is hereby granted, provided that
+ * the above copyright notice, this paragraph and the following three paragraphs
+ * appear in all copies. Permission to make use of this software for other than
+ * academic research and education purposes may be obtained by contacting:
+ *
+ * Office of Innovation and Commercialization
+ * 9500 Gilman Drive, Mail Code 0910
+ * University of California
+ * La Jolla, CA 92093-0910
+ * (858) 534-5815
+ * invent@ucsd.edu
+ *
+ * This software program and documentation are copyrighted by The Regents of the
+ * University of California. The software program and documentation are supplied
+ * "as is", without any accompanying services from The Regents. The Regents does
+ * not warrant that the operation of the program will be uninterrupted or
+ * error-free. The end-user understands that the program was developed for research
+ * purposes and is advised not to rely exclusively on the program for any reason.
+ *
+ * IN NO EVENT SHALL THE UNIVERSITY OF CALIFORNIA BE LIABLE TO ANY PARTY FOR
+ * DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES, INCLUDING LOST
+ * PROFITS, ARISING OUT OF THE USE OF THIS SOFTWARE AND ITS DOCUMENTATION, EVEN IF
+ * THE UNIVERSITY OF CALIFORNIA HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH
+ * DAMAGE. THE UNIVERSITY OF CALIFORNIA SPECIFICALLY DISCLAIMS ANY WARRANTIES,
+ * INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND
+ * FITNESS FOR A PARTICULAR PURPOSE. THE SOFTWARE PROVIDED HEREUNDER IS ON AN "AS
+ * IS" BASIS, AND THE UNIVERSITY OF CALIFORNIA HAS NO OBLIGATIONS TO PROVIDE
+ * MAINTENANCE, SUPPORT, UPDATES, ENHANCEMENTS, OR MODIFICATIONS.
+ */
+#sankey_div {
+  margin-top: 2rem;
+  width: 100%; }
+  #sankey_div #chart_div {
+    padding: 2rem 5% !important;
+    display: block;
+    width: 100%; }
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIm1haW4tY29tcC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0VBZ0NFO0FBQ0Y7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0VBZ0NFO0FBQ0Y7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0VBZ0NFO0FBQ0Y7Ozs7Ozs7Ozs7Ozs7OztDQWVDO0FBQ0Q7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0VBZ0NFO0FBQ0Y7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0VBZ0NFO0FBQ0Y7RUFDRSw4Q0FBOEM7RUFDOUMseUJBQXlCO0VBQ3pCLFdBQVc7RUFDWCxZQUFZO0VBQ1osYUFBYTtFQUNiLHFCQUFxQjtFQUNyQix1QkFBdUIsRUFBRTtFQUN6QjtJQUNFLGlCQUFpQixFQUFFO0VBQ3JCO0lBQ0UsaUJBQWlCO0lBQ2pCLGFBQWE7SUFDYix1QkFBdUIsRUFBRTtJQUN6QjtNQUNFO1FBQ0Usc0JBQXNCO1FBQ3RCLHdCQUF3QixFQUFFLEVBQUU7SUFDaEM7TUFDRSxZQUFZO01BQ1osWUFBWTtNQUNaLGFBQWE7TUFDYix1QkFBdUI7TUFDdkIsbUJBQW1CLEVBQUU7TUFDckI7UUFDRTtVQUNFLDhCQUE4QixFQUFFLEVBQUU7TUFDdEM7UUFDRSx1QkFBdUI7UUFDdkIsc0JBQXNCLEVBQUU7TUFDMUI7UUFDRSxZQUFZO1FBQ1osV0FBVyxFQUFFO01BQ2Y7UUFDRSxrQkFBa0IsRUFBRTtRQUNwQjtVQUNFO1lBQ0UsZUFBZTtZQUNmLHFCQUFxQixFQUFFLEVBQUU7O0FBRXJDOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztFQWdDRTtBQUNGO0VBQ0UsV0FBVztFQUNYLHlCQUF5QjtFQUN6Qiw2QkFBNkI7RUFDN0IsYUFBYTtFQUNiLHVCQUF1QjtFQUN2QixtQkFBbUI7RUFDbkIsYUFBYTtFQUNiLFlBQVksRUFBRTtFQUNkO0lBQ0UsYUFBYTtJQUNi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Q0UsMkJBQTJCO0lBQzNCLGNBQWM7SUFDZCxXQUFXLEVBQUUiLCJmaWxlIjoibWFpbi1jb21wLnByZWZpeC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIvKiFcbiAqIFRoaXMgc29mdHdhcmUgaXMgQ29weXJpZ2h0IChjKSAyMDE1IFRoZSBSZWdlbnRzIG9mIHRoZSBVbml2ZXJzaXR5IG9mXG4gKiBDYWxpZm9ybmlhLiBBbGwgUmlnaHRzIFJlc2VydmVkLiBQZXJtaXNzaW9uIHRvIGNvcHksIG1vZGlmeSwgYW5kIGRpc3RyaWJ1dGUgdGhpc1xuICogc29mdHdhcmUgYW5kIGl0cyBkb2N1bWVudGF0aW9uIGZvciBhY2FkZW1pYyByZXNlYXJjaCBhbmQgZWR1Y2F0aW9uIHB1cnBvc2VzLFxuICogd2l0aG91dCBmZWUsIGFuZCB3aXRob3V0IGEgd3JpdHRlbiBhZ3JlZW1lbnQgaXMgaGVyZWJ5IGdyYW50ZWQsIHByb3ZpZGVkIHRoYXRcbiAqIHRoZSBhYm92ZSBjb3B5cmlnaHQgbm90aWNlLCB0aGlzIHBhcmFncmFwaCBhbmQgdGhlIGZvbGxvd2luZyB0aHJlZSBwYXJhZ3JhcGhzXG4gKiBhcHBlYXIgaW4gYWxsIGNvcGllcy4gUGVybWlzc2lvbiB0byBtYWtlIHVzZSBvZiB0aGlzIHNvZnR3YXJlIGZvciBvdGhlciB0aGFuXG4gKiBhY2FkZW1pYyByZXNlYXJjaCBhbmQgZWR1Y2F0aW9uIHB1cnBvc2VzIG1heSBiZSBvYnRhaW5lZCBieSBjb250YWN0aW5nOlxuICpcbiAqIE9mZmljZSBvZiBJbm5vdmF0aW9uIGFuZCBDb21tZXJjaWFsaXphdGlvblxuICogOTUwMCBHaWxtYW4gRHJpdmUsIE1haWwgQ29kZSAwOTEwXG4gKiBVbml2ZXJzaXR5IG9mIENhbGlmb3JuaWFcbiAqIExhIEpvbGxhLCBDQSA5MjA5My0wOTEwXG4gKiAoODU4KSA1MzQtNTgxNVxuICogaW52ZW50QHVjc2QuZWR1XG4gKlxuICogVGhpcyBzb2Z0d2FyZSBwcm9ncmFtIGFuZCBkb2N1bWVudGF0aW9uIGFyZSBjb3B5cmlnaHRlZCBieSBUaGUgUmVnZW50cyBvZiB0aGVcbiAqIFVuaXZlcnNpdHkgb2YgQ2FsaWZvcm5pYS4gVGhlIHNvZnR3YXJlIHByb2dyYW0gYW5kIGRvY3VtZW50YXRpb24gYXJlIHN1cHBsaWVkXG4gKiBcImFzIGlzXCIsIHdpdGhvdXQgYW55IGFjY29tcGFueWluZyBzZXJ2aWNlcyBmcm9tIFRoZSBSZWdlbnRzLiBUaGUgUmVnZW50cyBkb2VzXG4gKiBub3Qgd2FycmFudCB0aGF0IHRoZSBvcGVyYXRpb24gb2YgdGhlIHByb2dyYW0gd2lsbCBiZSB1bmludGVycnVwdGVkIG9yXG4gKiBlcnJvci1mcmVlLiBUaGUgZW5kLXVzZXIgdW5kZXJzdGFuZHMgdGhhdCB0aGUgcHJvZ3JhbSB3YXMgZGV2ZWxvcGVkIGZvciByZXNlYXJjaFxuICogcHVycG9zZXMgYW5kIGlzIGFkdmlzZWQgbm90IHRvIHJlbHkgZXhjbHVzaXZlbHkgb24gdGhlIHByb2dyYW0gZm9yIGFueSByZWFzb24uXG4gKlxuICogSU4gTk8gRVZFTlQgU0hBTEwgVEhFIFVOSVZFUlNJVFkgT0YgQ0FMSUZPUk5JQSBCRSBMSUFCTEUgVE8gQU5ZIFBBUlRZIEZPUlxuICogRElSRUNULCBJTkRJUkVDVCwgU1BFQ0lBTCwgSU5DSURFTlRBTCwgT1IgQ09OU0VRVUVOVElBTCBEQU1BR0VTLCBJTkNMVURJTkcgTE9TVFxuICogUFJPRklUUywgQVJJU0lORyBPVVQgT0YgVEhFIFVTRSBPRiBUSElTIFNPRlRXQVJFIEFORCBJVFMgRE9DVU1FTlRBVElPTiwgRVZFTiBJRlxuICogVEhFIFVOSVZFUlNJVFkgT0YgQ0FMSUZPUk5JQSBIQVMgQkVFTiBBRFZJU0VEIE9GIFRIRSBQT1NTSUJJTElUWSBPRiBTVUNIXG4gKiBEQU1BR0UuIFRIRSBVTklWRVJTSVRZIE9GIENBTElGT1JOSUEgU1BFQ0lGSUNBTExZIERJU0NMQUlNUyBBTlkgV0FSUkFOVElFUyxcbiAqIElOQ0xVRElORywgQlVUIE5PVCBMSU1JVEVEIFRPLCBUSEUgSU1QTElFRCBXQVJSQU5USUVTIE9GIE1FUkNIQU5UQUJJTElUWSBBTkRcbiAqIEZJVE5FU1MgRk9SIEEgUEFSVElDVUxBUiBQVVJQT1NFLiBUSEUgU09GVFdBUkUgUFJPVklERUQgSEVSRVVOREVSIElTIE9OIEFOIFwiQVNcbiAqIElTXCIgQkFTSVMsIEFORCBUSEUgVU5JVkVSU0lUWSBPRiBDQUxJRk9STklBIEhBUyBOTyBPQkxJR0FUSU9OUyBUTyBQUk9WSURFXG4gKiBNQUlOVEVOQU5DRSwgU1VQUE9SVCwgVVBEQVRFUywgRU5IQU5DRU1FTlRTLCBPUiBNT0RJRklDQVRJT05TLlxuICovXG4vKiFcbiAqIFRoaXMgc29mdHdhcmUgaXMgQ29weXJpZ2h0IChjKSAyMDE1IFRoZSBSZWdlbnRzIG9mIHRoZSBVbml2ZXJzaXR5IG9mXG4gKiBDYWxpZm9ybmlhLiBBbGwgUmlnaHRzIFJlc2VydmVkLiBQZXJtaXNzaW9uIHRvIGNvcHksIG1vZGlmeSwgYW5kIGRpc3RyaWJ1dGUgdGhpc1xuICogc29mdHdhcmUgYW5kIGl0cyBkb2N1bWVudGF0aW9uIGZvciBhY2FkZW1pYyByZXNlYXJjaCBhbmQgZWR1Y2F0aW9uIHB1cnBvc2VzLFxuICogd2l0aG91dCBmZWUsIGFuZCB3aXRob3V0IGEgd3JpdHRlbiBhZ3JlZW1lbnQgaXMgaGVyZWJ5IGdyYW50ZWQsIHByb3ZpZGVkIHRoYXRcbiAqIHRoZSBhYm92ZSBjb3B5cmlnaHQgbm90aWNlLCB0aGlzIHBhcmFncmFwaCBhbmQgdGhlIGZvbGxvd2luZyB0aHJlZSBwYXJhZ3JhcGhzXG4gKiBhcHBlYXIgaW4gYWxsIGNvcGllcy4gUGVybWlzc2lvbiB0byBtYWtlIHVzZSBvZiB0aGlzIHNvZnR3YXJlIGZvciBvdGhlciB0aGFuXG4gKiBhY2FkZW1pYyByZXNlYXJjaCBhbmQgZWR1Y2F0aW9uIHB1cnBvc2VzIG1heSBiZSBvYnRhaW5lZCBieSBjb250YWN0aW5nOlxuICpcbiAqIE9mZmljZSBvZiBJbm5vdmF0aW9uIGFuZCBDb21tZXJjaWFsaXphdGlvblxuICogOTUwMCBHaWxtYW4gRHJpdmUsIE1haWwgQ29kZSAwOTEwXG4gKiBVbml2ZXJzaXR5IG9mIENhbGlmb3JuaWFcbiAqIExhIEpvbGxhLCBDQSA5MjA5My0wOTEwXG4gKiAoODU4KSA1MzQtNTgxNVxuICogaW52ZW50QHVjc2QuZWR1XG4gKlxuICogVGhpcyBzb2Z0d2FyZSBwcm9ncmFtIGFuZCBkb2N1bWVudGF0aW9uIGFyZSBjb3B5cmlnaHRlZCBieSBUaGUgUmVnZW50cyBvZiB0aGVcbiAqIFVuaXZlcnNpdHkgb2YgQ2FsaWZvcm5pYS4gVGhlIHNvZnR3YXJlIHByb2dyYW0gYW5kIGRvY3VtZW50YXRpb24gYXJlIHN1cHBsaWVkXG4gKiBcImFzIGlzXCIsIHdpdGhvdXQgYW55IGFjY29tcGFueWluZyBzZXJ2aWNlcyBmcm9tIFRoZSBSZWdlbnRzLiBUaGUgUmVnZW50cyBkb2VzXG4gKiBub3Qgd2FycmFudCB0aGF0IHRoZSBvcGVyYXRpb24gb2YgdGhlIHByb2dyYW0gd2lsbCBiZSB1bmludGVycnVwdGVkIG9yXG4gKiBlcnJvci1mcmVlLiBUaGUgZW5kLXVzZXIgdW5kZXJzdGFuZHMgdGhhdCB0aGUgcHJvZ3JhbSB3YXMgZGV2ZWxvcGVkIGZvciByZXNlYXJjaFxuICogcHVycG9zZXMgYW5kIGlzIGFkdmlzZWQgbm90IHRvIHJlbHkgZXhjbHVzaXZlbHkgb24gdGhlIHByb2dyYW0gZm9yIGFueSByZWFzb24uXG4gKlxuICogSU4gTk8gRVZFTlQgU0hBTEwgVEhFIFVOSVZFUlNJVFkgT0YgQ0FMSUZPUk5JQSBCRSBMSUFCTEUgVE8gQU5ZIFBBUlRZIEZPUlxuICogRElSRUNULCBJTkRJUkVDVCwgU1BFQ0lBTCwgSU5DSURFTlRBTCwgT1IgQ09OU0VRVUVOVElBTCBEQU1BR0VTLCBJTkNMVURJTkcgTE9TVFxuICogUFJPRklUUywgQVJJU0lORyBPVVQgT0YgVEhFIFVTRSBPRiBUSElTIFNPRlRXQVJFIEFORCBJVFMgRE9DVU1FTlRBVElPTiwgRVZFTiBJRlxuICogVEhFIFVOSVZFUlNJVFkgT0YgQ0FMSUZPUk5JQSBIQVMgQkVFTiBBRFZJU0VEIE9GIFRIRSBQT1NTSUJJTElUWSBPRiBTVUNIXG4gKiBEQU1BR0UuIFRIRSBVTklWRVJTSVRZIE9GIENBTElGT1JOSUEgU1BFQ0lGSUNBTExZIERJU0NMQUlNUyBBTlkgV0FSUkFOVElFUyxcbiAqIElOQ0xVRElORywgQlVUIE5PVCBMSU1JVEVEIFRPLCBUSEUgSU1QTElFRCBXQVJSQU5USUVTIE9GIE1FUkNIQU5UQUJJTElUWSBBTkRcbiAqIEZJVE5FU1MgRk9SIEEgUEFSVElDVUxBUiBQVVJQT1NFLiBUSEUgU09GVFdBUkUgUFJPVklERUQgSEVSRVVOREVSIElTIE9OIEFOIFwiQVNcbiAqIElTXCIgQkFTSVMsIEFORCBUSEUgVU5JVkVSU0lUWSBPRiBDQUxJRk9STklBIEhBUyBOTyBPQkxJR0FUSU9OUyBUTyBQUk9WSURFXG4gKiBNQUlOVEVOQU5DRSwgU1VQUE9SVCwgVVBEQVRFUywgRU5IQU5DRU1FTlRTLCBPUiBNT0RJRklDQVRJT05TLlxuICovXG4vKiFcbiAqIFRoaXMgc29mdHdhcmUgaXMgQ29weXJpZ2h0IChjKSAyMDE1IFRoZSBSZWdlbnRzIG9mIHRoZSBVbml2ZXJzaXR5IG9mXG4gKiBDYWxpZm9ybmlhLiBBbGwgUmlnaHRzIFJlc2VydmVkLiBQZXJtaXNzaW9uIHRvIGNvcHksIG1vZGlmeSwgYW5kIGRpc3RyaWJ1dGUgdGhpc1xuICogc29mdHdhcmUgYW5kIGl0cyBkb2N1bWVudGF0aW9uIGZvciBhY2FkZW1pYyByZXNlYXJjaCBhbmQgZWR1Y2F0aW9uIHB1cnBvc2VzLFxuICogd2l0aG91dCBmZWUsIGFuZCB3aXRob3V0IGEgd3JpdHRlbiBhZ3JlZW1lbnQgaXMgaGVyZWJ5IGdyYW50ZWQsIHByb3ZpZGVkIHRoYXRcbiAqIHRoZSBhYm92ZSBjb3B5cmlnaHQgbm90aWNlLCB0aGlzIHBhcmFncmFwaCBhbmQgdGhlIGZvbGxvd2luZyB0aHJlZSBwYXJhZ3JhcGhzXG4gKiBhcHBlYXIgaW4gYWxsIGNvcGllcy4gUGVybWlzc2lvbiB0byBtYWtlIHVzZSBvZiB0aGlzIHNvZnR3YXJlIGZvciBvdGhlciB0aGFuXG4gKiBhY2FkZW1pYyByZXNlYXJjaCBhbmQgZWR1Y2F0aW9uIHB1cnBvc2VzIG1heSBiZSBvYnRhaW5lZCBieSBjb250YWN0aW5nOlxuICpcbiAqIE9mZmljZSBvZiBJbm5vdmF0aW9uIGFuZCBDb21tZXJjaWFsaXphdGlvblxuICogOTUwMCBHaWxtYW4gRHJpdmUsIE1haWwgQ29kZSAwOTEwXG4gKiBVbml2ZXJzaXR5IG9mIENhbGlmb3JuaWFcbiAqIExhIEpvbGxhLCBDQSA5MjA5My0wOTEwXG4gKiAoODU4KSA1MzQtNTgxNVxuICogaW52ZW50QHVjc2QuZWR1XG4gKlxuICogVGhpcyBzb2Z0d2FyZSBwcm9ncmFtIGFuZCBkb2N1bWVudGF0aW9uIGFyZSBjb3B5cmlnaHRlZCBieSBUaGUgUmVnZW50cyBvZiB0aGVcbiAqIFVuaXZlcnNpdHkgb2YgQ2FsaWZvcm5pYS4gVGhlIHNvZnR3YXJlIHByb2dyYW0gYW5kIGRvY3VtZW50YXRpb24gYXJlIHN1cHBsaWVkXG4gKiBcImFzIGlzXCIsIHdpdGhvdXQgYW55IGFjY29tcGFueWluZyBzZXJ2aWNlcyBmcm9tIFRoZSBSZWdlbnRzLiBUaGUgUmVnZW50cyBkb2VzXG4gKiBub3Qgd2FycmFudCB0aGF0IHRoZSBvcGVyYXRpb24gb2YgdGhlIHByb2dyYW0gd2lsbCBiZSB1bmludGVycnVwdGVkIG9yXG4gKiBlcnJvci1mcmVlLiBUaGUgZW5kLXVzZXIgdW5kZXJzdGFuZHMgdGhhdCB0aGUgcHJvZ3JhbSB3YXMgZGV2ZWxvcGVkIGZvciByZXNlYXJjaFxuICogcHVycG9zZXMgYW5kIGlzIGFkdmlzZWQgbm90IHRvIHJlbHkgZXhjbHVzaXZlbHkgb24gdGhlIHByb2dyYW0gZm9yIGFueSByZWFzb24uXG4gKlxuICogSU4gTk8gRVZFTlQgU0hBTEwgVEhFIFVOSVZFUlNJVFkgT0YgQ0FMSUZPUk5JQSBCRSBMSUFCTEUgVE8gQU5ZIFBBUlRZIEZPUlxuICogRElSRUNULCBJTkRJUkVDVCwgU1BFQ0lBTCwgSU5DSURFTlRBTCwgT1IgQ09OU0VRVUVOVElBTCBEQU1BR0VTLCBJTkNMVURJTkcgTE9TVFxuICogUFJPRklUUywgQVJJU0lORyBPVVQgT0YgVEhFIFVTRSBPRiBUSElTIFNPRlRXQVJFIEFORCBJVFMgRE9DVU1FTlRBVElPTiwgRVZFTiBJRlxuICogVEhFIFVOSVZFUlNJVFkgT0YgQ0FMSUZPUk5JQSBIQVMgQkVFTiBBRFZJU0VEIE9GIFRIRSBQT1NTSUJJTElUWSBPRiBTVUNIXG4gKiBEQU1BR0UuIFRIRSBVTklWRVJTSVRZIE9GIENBTElGT1JOSUEgU1BFQ0lGSUNBTExZIERJU0NMQUlNUyBBTlkgV0FSUkFOVElFUyxcbiAqIElOQ0xVRElORywgQlVUIE5PVCBMSU1JVEVEIFRPLCBUSEUgSU1QTElFRCBXQVJSQU5USUVTIE9GIE1FUkNIQU5UQUJJTElUWSBBTkRcbiAqIEZJVE5FU1MgRk9SIEEgUEFSVElDVUxBUiBQVVJQT1NFLiBUSEUgU09GVFdBUkUgUFJPVklERUQgSEVSRVVOREVSIElTIE9OIEFOIFwiQVNcbiAqIElTXCIgQkFTSVMsIEFORCBUSEUgVU5JVkVSU0lUWSBPRiBDQUxJRk9STklBIEhBUyBOTyBPQkxJR0FUSU9OUyBUTyBQUk9WSURFXG4gKiBNQUlOVEVOQU5DRSwgU1VQUE9SVCwgVVBEQVRFUywgRU5IQU5DRU1FTlRTLCBPUiBNT0RJRklDQVRJT05TLlxuICovXG4vKlxuMCAtIDQ4MHB4Olx0XHRcdFBob25lXG40ODFweCAtIDEwMjRweDpcdFx0VGFibGV0IFBvcnRyYWl0XG4xMDI1cHggLSAxMjgwcHg6XHRUYWJsZXQgTGFuZHNjYXBlXG4xMjgxcHggLSAxNzk5cHg6XHREZXNrdG9wIChub3JtYWwgc3R5bGVzIGFwcGx5KVxuMTgwMHB4ICsgOiBcdFx0XHRCaWcgRGVza3RvcFxuXG4kYnJlYWtwb2ludCBBcmd1bWVudCBDaG9pY2VzOlxuLSBwaG9uZS1zbVxuLSBwaG9uZVxuLSBwaG9uZS1tZFxuLSBwaG9uZS1sb2dcbi0gdGFiLXBvcnRcbi0gdGFiLWxhbmRcbi0gYmlnLWRlc2t0b3BcbiovXG4vKiFcbiAqIFRoaXMgc29mdHdhcmUgaXMgQ29weXJpZ2h0IChjKSAyMDE1IFRoZSBSZWdlbnRzIG9mIHRoZSBVbml2ZXJzaXR5IG9mXG4gKiBDYWxpZm9ybmlhLiBBbGwgUmlnaHRzIFJlc2VydmVkLiBQZXJtaXNzaW9uIHRvIGNvcHksIG1vZGlmeSwgYW5kIGRpc3RyaWJ1dGUgdGhpc1xuICogc29mdHdhcmUgYW5kIGl0cyBkb2N1bWVudGF0aW9uIGZvciBhY2FkZW1pYyByZXNlYXJjaCBhbmQgZWR1Y2F0aW9uIHB1cnBvc2VzLFxuICogd2l0aG91dCBmZWUsIGFuZCB3aXRob3V0IGEgd3JpdHRlbiBhZ3JlZW1lbnQgaXMgaGVyZWJ5IGdyYW50ZWQsIHByb3ZpZGVkIHRoYXRcbiAqIHRoZSBhYm92ZSBjb3B5cmlnaHQgbm90aWNlLCB0aGlzIHBhcmFncmFwaCBhbmQgdGhlIGZvbGxvd2luZyB0aHJlZSBwYXJhZ3JhcGhzXG4gKiBhcHBlYXIgaW4gYWxsIGNvcGllcy4gUGVybWlzc2lvbiB0byBtYWtlIHVzZSBvZiB0aGlzIHNvZnR3YXJlIGZvciBvdGhlciB0aGFuXG4gKiBhY2FkZW1pYyByZXNlYXJjaCBhbmQgZWR1Y2F0aW9uIHB1cnBvc2VzIG1heSBiZSBvYnRhaW5lZCBieSBjb250YWN0aW5nOlxuICpcbiAqIE9mZmljZSBvZiBJbm5vdmF0aW9uIGFuZCBDb21tZXJjaWFsaXphdGlvblxuICogOTUwMCBHaWxtYW4gRHJpdmUsIE1haWwgQ29kZSAwOTEwXG4gKiBVbml2ZXJzaXR5IG9mIENhbGlmb3JuaWFcbiAqIExhIEpvbGxhLCBDQSA5MjA5My0wOTEwXG4gKiAoODU4KSA1MzQtNTgxNVxuICogaW52ZW50QHVjc2QuZWR1XG4gKlxuICogVGhpcyBzb2Z0d2FyZSBwcm9ncmFtIGFuZCBkb2N1bWVudGF0aW9uIGFyZSBjb3B5cmlnaHRlZCBieSBUaGUgUmVnZW50cyBvZiB0aGVcbiAqIFVuaXZlcnNpdHkgb2YgQ2FsaWZvcm5pYS4gVGhlIHNvZnR3YXJlIHByb2dyYW0gYW5kIGRvY3VtZW50YXRpb24gYXJlIHN1cHBsaWVkXG4gKiBcImFzIGlzXCIsIHdpdGhvdXQgYW55IGFjY29tcGFueWluZyBzZXJ2aWNlcyBmcm9tIFRoZSBSZWdlbnRzLiBUaGUgUmVnZW50cyBkb2VzXG4gKiBub3Qgd2FycmFudCB0aGF0IHRoZSBvcGVyYXRpb24gb2YgdGhlIHByb2dyYW0gd2lsbCBiZSB1bmludGVycnVwdGVkIG9yXG4gKiBlcnJvci1mcmVlLiBUaGUgZW5kLXVzZXIgdW5kZXJzdGFuZHMgdGhhdCB0aGUgcHJvZ3JhbSB3YXMgZGV2ZWxvcGVkIGZvciByZXNlYXJjaFxuICogcHVycG9zZXMgYW5kIGlzIGFkdmlzZWQgbm90IHRvIHJlbHkgZXhjbHVzaXZlbHkgb24gdGhlIHByb2dyYW0gZm9yIGFueSByZWFzb24uXG4gKlxuICogSU4gTk8gRVZFTlQgU0hBTEwgVEhFIFVOSVZFUlNJVFkgT0YgQ0FMSUZPUk5JQSBCRSBMSUFCTEUgVE8gQU5ZIFBBUlRZIEZPUlxuICogRElSRUNULCBJTkRJUkVDVCwgU1BFQ0lBTCwgSU5DSURFTlRBTCwgT1IgQ09OU0VRVUVOVElBTCBEQU1BR0VTLCBJTkNMVURJTkcgTE9TVFxuICogUFJPRklUUywgQVJJU0lORyBPVVQgT0YgVEhFIFVTRSBPRiBUSElTIFNPRlRXQVJFIEFORCBJVFMgRE9DVU1FTlRBVElPTiwgRVZFTiBJRlxuICogVEhFIFVOSVZFUlNJVFkgT0YgQ0FMSUZPUk5JQSBIQVMgQkVFTiBBRFZJU0VEIE9GIFRIRSBQT1NTSUJJTElUWSBPRiBTVUNIXG4gKiBEQU1BR0UuIFRIRSBVTklWRVJTSVRZIE9GIENBTElGT1JOSUEgU1BFQ0lGSUNBTExZIERJU0NMQUlNUyBBTlkgV0FSUkFOVElFUyxcbiAqIElOQ0xVRElORywgQlVUIE5PVCBMSU1JVEVEIFRPLCBUSEUgSU1QTElFRCBXQVJSQU5USUVTIE9GIE1FUkNIQU5UQUJJTElUWSBBTkRcbiAqIEZJVE5FU1MgRk9SIEEgUEFSVElDVUxBUiBQVVJQT1NFLiBUSEUgU09GVFdBUkUgUFJPVklERUQgSEVSRVVOREVSIElTIE9OIEFOIFwiQVNcbiAqIElTXCIgQkFTSVMsIEFORCBUSEUgVU5JVkVSU0lUWSBPRiBDQUxJRk9STklBIEhBUyBOTyBPQkxJR0FUSU9OUyBUTyBQUk9WSURFXG4gKiBNQUlOVEVOQU5DRSwgU1VQUE9SVCwgVVBEQVRFUywgRU5IQU5DRU1FTlRTLCBPUiBNT0RJRklDQVRJT05TLlxuICovXG4vKiFcbiAqIFRoaXMgc29mdHdhcmUgaXMgQ29weXJpZ2h0IChjKSAyMDE1IFRoZSBSZWdlbnRzIG9mIHRoZSBVbml2ZXJzaXR5IG9mXG4gKiBDYWxpZm9ybmlhLiBBbGwgUmlnaHRzIFJlc2VydmVkLiBQZXJtaXNzaW9uIHRvIGNvcHksIG1vZGlmeSwgYW5kIGRpc3RyaWJ1dGUgdGhpc1xuICogc29mdHdhcmUgYW5kIGl0cyBkb2N1bWVudGF0aW9uIGZvciBhY2FkZW1pYyByZXNlYXJjaCBhbmQgZWR1Y2F0aW9uIHB1cnBvc2VzLFxuICogd2l0aG91dCBmZWUsIGFuZCB3aXRob3V0IGEgd3JpdHRlbiBhZ3JlZW1lbnQgaXMgaGVyZWJ5IGdyYW50ZWQsIHByb3ZpZGVkIHRoYXRcbiAqIHRoZSBhYm92ZSBjb3B5cmlnaHQgbm90aWNlLCB0aGlzIHBhcmFncmFwaCBhbmQgdGhlIGZvbGxvd2luZyB0aHJlZSBwYXJhZ3JhcGhzXG4gKiBhcHBlYXIgaW4gYWxsIGNvcGllcy4gUGVybWlzc2lvbiB0byBtYWtlIHVzZSBvZiB0aGlzIHNvZnR3YXJlIGZvciBvdGhlciB0aGFuXG4gKiBhY2FkZW1pYyByZXNlYXJjaCBhbmQgZWR1Y2F0aW9uIHB1cnBvc2VzIG1heSBiZSBvYnRhaW5lZCBieSBjb250YWN0aW5nOlxuICpcbiAqIE9mZmljZSBvZiBJbm5vdmF0aW9uIGFuZCBDb21tZXJjaWFsaXphdGlvblxuICogOTUwMCBHaWxtYW4gRHJpdmUsIE1haWwgQ29kZSAwOTEwXG4gKiBVbml2ZXJzaXR5IG9mIENhbGlmb3JuaWFcbiAqIExhIEpvbGxhLCBDQSA5MjA5My0wOTEwXG4gKiAoODU4KSA1MzQtNTgxNVxuICogaW52ZW50QHVjc2QuZWR1XG4gKlxuICogVGhpcyBzb2Z0d2FyZSBwcm9ncmFtIGFuZCBkb2N1bWVudGF0aW9uIGFyZSBjb3B5cmlnaHRlZCBieSBUaGUgUmVnZW50cyBvZiB0aGVcbiAqIFVuaXZlcnNpdHkgb2YgQ2FsaWZvcm5pYS4gVGhlIHNvZnR3YXJlIHByb2dyYW0gYW5kIGRvY3VtZW50YXRpb24gYXJlIHN1cHBsaWVkXG4gKiBcImFzIGlzXCIsIHdpdGhvdXQgYW55IGFjY29tcGFueWluZyBzZXJ2aWNlcyBmcm9tIFRoZSBSZWdlbnRzLiBUaGUgUmVnZW50cyBkb2VzXG4gKiBub3Qgd2FycmFudCB0aGF0IHRoZSBvcGVyYXRpb24gb2YgdGhlIHByb2dyYW0gd2lsbCBiZSB1bmludGVycnVwdGVkIG9yXG4gKiBlcnJvci1mcmVlLiBUaGUgZW5kLXVzZXIgdW5kZXJzdGFuZHMgdGhhdCB0aGUgcHJvZ3JhbSB3YXMgZGV2ZWxvcGVkIGZvciByZXNlYXJjaFxuICogcHVycG9zZXMgYW5kIGlzIGFkdmlzZWQgbm90IHRvIHJlbHkgZXhjbHVzaXZlbHkgb24gdGhlIHByb2dyYW0gZm9yIGFueSByZWFzb24uXG4gKlxuICogSU4gTk8gRVZFTlQgU0hBTEwgVEhFIFVOSVZFUlNJVFkgT0YgQ0FMSUZPUk5JQSBCRSBMSUFCTEUgVE8gQU5ZIFBBUlRZIEZPUlxuICogRElSRUNULCBJTkRJUkVDVCwgU1BFQ0lBTCwgSU5DSURFTlRBTCwgT1IgQ09OU0VRVUVOVElBTCBEQU1BR0VTLCBJTkNMVURJTkcgTE9TVFxuICogUFJPRklUUywgQVJJU0lORyBPVVQgT0YgVEhFIFVTRSBPRiBUSElTIFNPRlRXQVJFIEFORCBJVFMgRE9DVU1FTlRBVElPTiwgRVZFTiBJRlxuICogVEhFIFVOSVZFUlNJVFkgT0YgQ0FMSUZPUk5JQSBIQVMgQkVFTiBBRFZJU0VEIE9GIFRIRSBQT1NTSUJJTElUWSBPRiBTVUNIXG4gKiBEQU1BR0UuIFRIRSBVTklWRVJTSVRZIE9GIENBTElGT1JOSUEgU1BFQ0lGSUNBTExZIERJU0NMQUlNUyBBTlkgV0FSUkFOVElFUyxcbiAqIElOQ0xVRElORywgQlVUIE5PVCBMSU1JVEVEIFRPLCBUSEUgSU1QTElFRCBXQVJSQU5USUVTIE9GIE1FUkNIQU5UQUJJTElUWSBBTkRcbiAqIEZJVE5FU1MgRk9SIEEgUEFSVElDVUxBUiBQVVJQT1NFLiBUSEUgU09GVFdBUkUgUFJPVklERUQgSEVSRVVOREVSIElTIE9OIEFOIFwiQVNcbiAqIElTXCIgQkFTSVMsIEFORCBUSEUgVU5JVkVSU0lUWSBPRiBDQUxJRk9STklBIEhBUyBOTyBPQkxJR0FUSU9OUyBUTyBQUk9WSURFXG4gKiBNQUlOVEVOQU5DRSwgU1VQUE9SVCwgVVBEQVRFUywgRU5IQU5DRU1FTlRTLCBPUiBNT0RJRklDQVRJT05TLlxuICovXG4uZm9vdGVyIHtcbiAgZmlsdGVyOiBkcm9wLXNoYWRvdygwLjVyZW0gMC41cmVtIDAuNXJlbSAjMjIyKTtcbiAgYmFja2dyb3VuZC1jb2xvcjogIzJjM2U1MDtcbiAgY29sb3I6ICNmZmY7XG4gIGhlaWdodDogYXV0bztcbiAgZGlzcGxheTogZmxleDtcbiAgYWxpZ24taXRlbXM6IGZsZXgtZW5kO1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjsgfVxuICAuZm9vdGVyIC5yb3cge1xuICAgIG1heC13aWR0aDogMTE0cmVtOyB9XG4gIC5mb290ZXJfX2xvZ29zIHtcbiAgICBwYWRkaW5nOiAzLjVyZW0gMDtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGp1c3RpZnktY29udGVudDogY2VudGVyOyB9XG4gICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiA0NmVtKSB7XG4gICAgICAuZm9vdGVyX19sb2dvcyB7XG4gICAgICAgIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gICAgICAgIHBhZGRpbmc6IDUuNXJlbSAwIDEuNXJlbTsgfSB9XG4gICAgLmZvb3Rlcl9fbG9nb3MtaXRlbSB7XG4gICAgICBoZWlnaHQ6IDNyZW07XG4gICAgICB3aWR0aDogMTVyZW07XG4gICAgICBkaXNwbGF5OiBmbGV4O1xuICAgICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gICAgICBhbGlnbi1pdGVtczogY2VudGVyOyB9XG4gICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChtYXgtd2lkdGg6IDQ2ZW0pIHtcbiAgICAgICAgLmZvb3Rlcl9fbG9nb3MtaXRlbS0tZ2F0ZWNoIHtcbiAgICAgICAgICBtYXJnaW4tYm90dG9tOiA0cmVtICFpbXBvcnRhbnQ7IH0gfVxuICAgICAgLmZvb3Rlcl9fbG9nb3MtaXRlbS0tZ2F0ZWNoIGltZyB7XG4gICAgICAgIGhlaWdodDogNnJlbSAhaW1wb3J0YW50O1xuICAgICAgICB3aWR0aDogYXV0byAhaW1wb3J0YW50OyB9XG4gICAgICAuZm9vdGVyX19sb2dvcy1pdGVtIGltZyB7XG4gICAgICAgIGhlaWdodDogYXV0bztcbiAgICAgICAgd2lkdGg6IDEwMCU7IH1cbiAgICAgIC5mb290ZXJfX2xvZ29zLWl0ZW06bm90KDpsYXN0LWNoaWxkKSB7XG4gICAgICAgIG1hcmdpbi1yaWdodDogN3JlbTsgfVxuICAgICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChtYXgtd2lkdGg6IDQ2ZW0pIHtcbiAgICAgICAgICAuZm9vdGVyX19sb2dvcy1pdGVtOm5vdCg6bGFzdC1jaGlsZCkge1xuICAgICAgICAgICAgbWFyZ2luLXJpZ2h0OiAwO1xuICAgICAgICAgICAgbWFyZ2luLWJvdHRvbTogMS41cmVtOyB9IH1cblxuLyohXG4gKiBUaGlzIHNvZnR3YXJlIGlzIENvcHlyaWdodCAoYykgMjAxNSBUaGUgUmVnZW50cyBvZiB0aGUgVW5pdmVyc2l0eSBvZlxuICogQ2FsaWZvcm5pYS4gQWxsIFJpZ2h0cyBSZXNlcnZlZC4gUGVybWlzc2lvbiB0byBjb3B5LCBtb2RpZnksIGFuZCBkaXN0cmlidXRlIHRoaXNcbiAqIHNvZnR3YXJlIGFuZCBpdHMgZG9jdW1lbnRhdGlvbiBmb3IgYWNhZGVtaWMgcmVzZWFyY2ggYW5kIGVkdWNhdGlvbiBwdXJwb3NlcyxcbiAqIHdpdGhvdXQgZmVlLCBhbmQgd2l0aG91dCBhIHdyaXR0ZW4gYWdyZWVtZW50IGlzIGhlcmVieSBncmFudGVkLCBwcm92aWRlZCB0aGF0XG4gKiB0aGUgYWJvdmUgY29weXJpZ2h0IG5vdGljZSwgdGhpcyBwYXJhZ3JhcGggYW5kIHRoZSBmb2xsb3dpbmcgdGhyZWUgcGFyYWdyYXBoc1xuICogYXBwZWFyIGluIGFsbCBjb3BpZXMuIFBlcm1pc3Npb24gdG8gbWFrZSB1c2Ugb2YgdGhpcyBzb2Z0d2FyZSBmb3Igb3RoZXIgdGhhblxuICogYWNhZGVtaWMgcmVzZWFyY2ggYW5kIGVkdWNhdGlvbiBwdXJwb3NlcyBtYXkgYmUgb2J0YWluZWQgYnkgY29udGFjdGluZzpcbiAqXG4gKiBPZmZpY2Ugb2YgSW5ub3ZhdGlvbiBhbmQgQ29tbWVyY2lhbGl6YXRpb25cbiAqIDk1MDAgR2lsbWFuIERyaXZlLCBNYWlsIENvZGUgMDkxMFxuICogVW5pdmVyc2l0eSBvZiBDYWxpZm9ybmlhXG4gKiBMYSBKb2xsYSwgQ0EgOTIwOTMtMDkxMFxuICogKDg1OCkgNTM0LTU4MTVcbiAqIGludmVudEB1Y3NkLmVkdVxuICpcbiAqIFRoaXMgc29mdHdhcmUgcHJvZ3JhbSBhbmQgZG9jdW1lbnRhdGlvbiBhcmUgY29weXJpZ2h0ZWQgYnkgVGhlIFJlZ2VudHMgb2YgdGhlXG4gKiBVbml2ZXJzaXR5IG9mIENhbGlmb3JuaWEuIFRoZSBzb2Z0d2FyZSBwcm9ncmFtIGFuZCBkb2N1bWVudGF0aW9uIGFyZSBzdXBwbGllZFxuICogXCJhcyBpc1wiLCB3aXRob3V0IGFueSBhY2NvbXBhbnlpbmcgc2VydmljZXMgZnJvbSBUaGUgUmVnZW50cy4gVGhlIFJlZ2VudHMgZG9lc1xuICogbm90IHdhcnJhbnQgdGhhdCB0aGUgb3BlcmF0aW9uIG9mIHRoZSBwcm9ncmFtIHdpbGwgYmUgdW5pbnRlcnJ1cHRlZCBvclxuICogZXJyb3ItZnJlZS4gVGhlIGVuZC11c2VyIHVuZGVyc3RhbmRzIHRoYXQgdGhlIHByb2dyYW0gd2FzIGRldmVsb3BlZCBmb3IgcmVzZWFyY2hcbiAqIHB1cnBvc2VzIGFuZCBpcyBhZHZpc2VkIG5vdCB0byByZWx5IGV4Y2x1c2l2ZWx5IG9uIHRoZSBwcm9ncmFtIGZvciBhbnkgcmVhc29uLlxuICpcbiAqIElOIE5PIEVWRU5UIFNIQUxMIFRIRSBVTklWRVJTSVRZIE9GIENBTElGT1JOSUEgQkUgTElBQkxFIFRPIEFOWSBQQVJUWSBGT1JcbiAqIERJUkVDVCwgSU5ESVJFQ1QsIFNQRUNJQUwsIElOQ0lERU5UQUwsIE9SIENPTlNFUVVFTlRJQUwgREFNQUdFUywgSU5DTFVESU5HIExPU1RcbiAqIFBST0ZJVFMsIEFSSVNJTkcgT1VUIE9GIFRIRSBVU0UgT0YgVEhJUyBTT0ZUV0FSRSBBTkQgSVRTIERPQ1VNRU5UQVRJT04sIEVWRU4gSUZcbiAqIFRIRSBVTklWRVJTSVRZIE9GIENBTElGT1JOSUEgSEFTIEJFRU4gQURWSVNFRCBPRiBUSEUgUE9TU0lCSUxJVFkgT0YgU1VDSFxuICogREFNQUdFLiBUSEUgVU5JVkVSU0lUWSBPRiBDQUxJRk9STklBIFNQRUNJRklDQUxMWSBESVNDTEFJTVMgQU5ZIFdBUlJBTlRJRVMsXG4gKiBJTkNMVURJTkcsIEJVVCBOT1QgTElNSVRFRCBUTywgVEhFIElNUExJRUQgV0FSUkFOVElFUyBPRiBNRVJDSEFOVEFCSUxJVFkgQU5EXG4gKiBGSVRORVNTIEZPUiBBIFBBUlRJQ1VMQVIgUFVSUE9TRS4gVEhFIFNPRlRXQVJFIFBST1ZJREVEIEhFUkVVTkRFUiBJUyBPTiBBTiBcIkFTXG4gKiBJU1wiIEJBU0lTLCBBTkQgVEhFIFVOSVZFUlNJVFkgT0YgQ0FMSUZPUk5JQSBIQVMgTk8gT0JMSUdBVElPTlMgVE8gUFJPVklERVxuICogTUFJTlRFTkFOQ0UsIFNVUFBPUlQsIFVQREFURVMsIEVOSEFOQ0VNRU5UUywgT1IgTU9ESUZJQ0FUSU9OUy5cbiAqL1xuLmhlYWRlciB7XG4gIHdpZHRoOiAxMDAlO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjMmMzZTUwO1xuICBib3gtc2hhZG93OiAwIDFweCAycHggIzlGOUQ5RDtcbiAgZGlzcGxheTogZmxleDtcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIHotaW5kZXg6IDEwMDA7XG4gIGhlaWdodDogNXJlbTsgfVxuICAuaGVhZGVyX19jb250YWluZXIge1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgZmxleC1kaXJlY3Rpb246IHJvdztcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IGxlZnQ7XG4gICAgbWF4LXdpZHRoOiAxMTRyZW07XG4gICAgd2lkdGg6IDEwMCU7XG4gICAgaGVpZ2h0OiBhdXRvOyB9XG4gICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiA0MGVtKSB7XG4gICAgICAuaGVhZGVyX19jb250YWluZXIge1xuICAgICAgICBkaXNwbGF5OiBmbGV4O1xuICAgICAgICBqdXN0aWZ5LWNvbnRlbnQ6IHNwYWNlLWJldHdlZW47IH0gfVxuICAuaGVhZGVyX19sb2dvIHtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgIHotaW5kZXg6IDEwO1xuICAgIG92ZXJmbG93OiBoaWRkZW47IH1cbiAgICAuaGVhZGVyX19sb2dvIGEge1xuICAgICAgZGlzcGxheTogYmxvY2s7IH1cbiAgICAgIC5oZWFkZXJfX2xvZ28gYSBpbWcge1xuICAgICAgICBoZWlnaHQ6IDMuNXJlbTsgfVxuICAuaGVhZGVyX19uYXYge1xuICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgICB6LWluZGV4OiAxMDsgfVxuICAgIC5oZWFkZXJfX25hdi0tbW9iaWxlIHtcbiAgICAgIGRpc3BsYXk6IG5vbmU7IH1cbiAgLmhlYWRlcl9fbGlzdCB7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IHNwYWNlLWJldHdlZW47XG4gICAgY29sb3I6ICNmZmY7XG4gICAgZm9udC1mYW1pbHk6IFwiTGF0b1wiLCBzYW5zLXNlcmlmO1xuICAgIGZvbnQtc2l6ZTogMS40cmVtO1xuICAgIHRleHQtdHJhbnNmb3JtOiBjYXBpdGFsaXplO1xuICAgIGhlaWdodDogMTAwJTtcbiAgICBtYXJnaW46IDA7IH1cbiAgLmhlYWRlcl9faXRlbSB7XG4gICAgd2lkdGg6IDE4cmVtO1xuICAgIGxpc3Qtc3R5bGUtdHlwZTogbm9uZTtcbiAgICBoZWlnaHQ6IGF1dG87XG4gICAgZGlzcGxheTogZmxleDsgfVxuICAgIC5oZWFkZXJfX2l0ZW1fX3JpZ2h0IHtcbiAgICAgIG1hcmdpbi1sZWZ0OiA1cmVtOyB9XG4gIC5oZWFkZXJfX2xpbms6bGluaywgLmhlYWRlcl9fbGluazp2aXNpdGVkIHtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgd2lkdGg6IDEwMCU7XG4gICAgaGVpZ2h0OiBhdXRvO1xuICAgIGNvbG9yOiAjZmZmO1xuICAgIHRleHQtZGVjb3JhdGlvbjogbm9uZTsgfVxuICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG1heC13aWR0aDogNDBlbSkge1xuICAgICAgLmhlYWRlcl9fbGluazpsaW5rLCAuaGVhZGVyX19saW5rOnZpc2l0ZWQge1xuICAgICAgICBwYWRkaW5nLXJpZ2h0OiA0LjVyZW07XG4gICAgICAgIGp1c3RpZnktY29udGVudDogZmxleC1lbmQ7IH0gfVxuICAgIC5oZWFkZXJfX2xpbms6bGluazpob3ZlciwgLmhlYWRlcl9fbGluazp2aXNpdGVkOmhvdmVyIHtcbiAgICAgIHRleHQtZGVjb3JhdGlvbjogbm9uZTtcbiAgICAgIGNvbG9yOiAjZmZmO1xuICAgICAgYmFja2dyb3VuZC1jb2xvcjogIzJjM2U1MDsgfVxuXG4vKiFcbiAqIFRoaXMgc29mdHdhcmUgaXMgQ29weXJpZ2h0IChjKSAyMDE1IFRoZSBSZWdlbnRzIG9mIHRoZSBVbml2ZXJzaXR5IG9mXG4gKiBDYWxpZm9ybmlhLiBBbGwgUmlnaHRzIFJlc2VydmVkLiBQZXJtaXNzaW9uIHRvIGNvcHksIG1vZGlmeSwgYW5kIGRpc3RyaWJ1dGUgdGhpc1xuICogc29mdHdhcmUgYW5kIGl0cyBkb2N1bWVudGF0aW9uIGZvciBhY2FkZW1pYyByZXNlYXJjaCBhbmQgZWR1Y2F0aW9uIHB1cnBvc2VzLFxuICogd2l0aG91dCBmZWUsIGFuZCB3aXRob3V0IGEgd3JpdHRlbiBhZ3JlZW1lbnQgaXMgaGVyZWJ5IGdyYW50ZWQsIHByb3ZpZGVkIHRoYXRcbiAqIHRoZSBhYm92ZSBjb3B5cmlnaHQgbm90aWNlLCB0aGlzIHBhcmFncmFwaCBhbmQgdGhlIGZvbGxvd2luZyB0aHJlZSBwYXJhZ3JhcGhzXG4gKiBhcHBlYXIgaW4gYWxsIGNvcGllcy4gUGVybWlzc2lvbiB0byBtYWtlIHVzZSBvZiB0aGlzIHNvZnR3YXJlIGZvciBvdGhlciB0aGFuXG4gKiBhY2FkZW1pYyByZXNlYXJjaCBhbmQgZWR1Y2F0aW9uIHB1cnBvc2VzIG1heSBiZSBvYnRhaW5lZCBieSBjb250YWN0aW5nOlxuICpcbiAqIE9mZmljZSBvZiBJbm5vdmF0aW9uIGFuZCBDb21tZXJjaWFsaXphdGlvblxuICogOTUwMCBHaWxtYW4gRHJpdmUsIE1haWwgQ29kZSAwOTEwXG4gKiBVbml2ZXJzaXR5IG9mIENhbGlmb3JuaWFcbiAqIExhIEpvbGxhLCBDQSA5MjA5My0wOTEwXG4gKiAoODU4KSA1MzQtNTgxNVxuICogaW52ZW50QHVjc2QuZWR1XG4gKlxuICogVGhpcyBzb2Z0d2FyZSBwcm9ncmFtIGFuZCBkb2N1bWVudGF0aW9uIGFyZSBjb3B5cmlnaHRlZCBieSBUaGUgUmVnZW50cyBvZiB0aGVcbiAqIFVuaXZlcnNpdHkgb2YgQ2FsaWZvcm5pYS4gVGhlIHNvZnR3YXJlIHByb2dyYW0gYW5kIGRvY3VtZW50YXRpb24gYXJlIHN1cHBsaWVkXG4gKiBcImFzIGlzXCIsIHdpdGhvdXQgYW55IGFjY29tcGFueWluZyBzZXJ2aWNlcyBmcm9tIFRoZSBSZWdlbnRzLiBUaGUgUmVnZW50cyBkb2VzXG4gKiBub3Qgd2FycmFudCB0aGF0IHRoZSBvcGVyYXRpb24gb2YgdGhlIHByb2dyYW0gd2lsbCBiZSB1bmludGVycnVwdGVkIG9yXG4gKiBlcnJvci1mcmVlLiBUaGUgZW5kLXVzZXIgdW5kZXJzdGFuZHMgdGhhdCB0aGUgcHJvZ3JhbSB3YXMgZGV2ZWxvcGVkIGZvciByZXNlYXJjaFxuICogcHVycG9zZXMgYW5kIGlzIGFkdmlzZWQgbm90IHRvIHJlbHkgZXhjbHVzaXZlbHkgb24gdGhlIHByb2dyYW0gZm9yIGFueSByZWFzb24uXG4gKlxuICogSU4gTk8gRVZFTlQgU0hBTEwgVEhFIFVOSVZFUlNJVFkgT0YgQ0FMSUZPUk5JQSBCRSBMSUFCTEUgVE8gQU5ZIFBBUlRZIEZPUlxuICogRElSRUNULCBJTkRJUkVDVCwgU1BFQ0lBTCwgSU5DSURFTlRBTCwgT1IgQ09OU0VRVUVOVElBTCBEQU1BR0VTLCBJTkNMVURJTkcgTE9TVFxuICogUFJPRklUUywgQVJJU0lORyBPVVQgT0YgVEhFIFVTRSBPRiBUSElTIFNPRlRXQVJFIEFORCBJVFMgRE9DVU1FTlRBVElPTiwgRVZFTiBJRlxuICogVEhFIFVOSVZFUlNJVFkgT0YgQ0FMSUZPUk5JQSBIQVMgQkVFTiBBRFZJU0VEIE9GIFRIRSBQT1NTSUJJTElUWSBPRiBTVUNIXG4gKiBEQU1BR0UuIFRIRSBVTklWRVJTSVRZIE9GIENBTElGT1JOSUEgU1BFQ0lGSUNBTExZIERJU0NMQUlNUyBBTlkgV0FSUkFOVElFUyxcbiAqIElOQ0xVRElORywgQlVUIE5PVCBMSU1JVEVEIFRPLCBUSEUgSU1QTElFRCBXQVJSQU5USUVTIE9GIE1FUkNIQU5UQUJJTElUWSBBTkRcbiAqIEZJVE5FU1MgRk9SIEEgUEFSVElDVUxBUiBQVVJQT1NFLiBUSEUgU09GVFdBUkUgUFJPVklERUQgSEVSRVVOREVSIElTIE9OIEFOIFwiQVNcbiAqIElTXCIgQkFTSVMsIEFORCBUSEUgVU5JVkVSU0lUWSBPRiBDQUxJRk9STklBIEhBUyBOTyBPQkxJR0FUSU9OUyBUTyBQUk9WSURFXG4gKiBNQUlOVEVOQU5DRSwgU1VQUE9SVCwgVVBEQVRFUywgRU5IQU5DRU1FTlRTLCBPUiBNT0RJRklDQVRJT05TLlxuICovXG5ib2R5IHtcbiAgd2lkdGg6IDEwMCU7IH1cblxuI2hpamFja3Mge1xuICB3aWR0aDogMTAwJTtcbiAgcGFkZGluZy1sZWZ0OiA0cmVtO1xuICBwYWRkaW5nLXJpZ2h0OiA0cmVtOyB9XG5cbi5zdWJwYWdlIC5wYWdlLWhlYWRlciB7XG4gIG1hcmdpbi10b3A6IDJyZW07XG4gIHBhZGRpbmctbGVmdDogMDtcbiAgcGFkZGluZy1yaWdodDogMDsgfVxuXG4vKiFcbiAqIFRoaXMgc29mdHdhcmUgaXMgQ29weXJpZ2h0IChjKSAyMDE1IFRoZSBSZWdlbnRzIG9mIHRoZSBVbml2ZXJzaXR5IG9mXG4gKiBDYWxpZm9ybmlhLiBBbGwgUmlnaHRzIFJlc2VydmVkLiBQZXJtaXNzaW9uIHRvIGNvcHksIG1vZGlmeSwgYW5kIGRpc3RyaWJ1dGUgdGhpc1xuICogc29mdHdhcmUgYW5kIGl0cyBkb2N1bWVudGF0aW9uIGZvciBhY2FkZW1pYyByZXNlYXJjaCBhbmQgZWR1Y2F0aW9uIHB1cnBvc2VzLFxuICogd2l0aG91dCBmZWUsIGFuZCB3aXRob3V0IGEgd3JpdHRlbiBhZ3JlZW1lbnQgaXMgaGVyZWJ5IGdyYW50ZWQsIHByb3ZpZGVkIHRoYXRcbiAqIHRoZSBhYm92ZSBjb3B5cmlnaHQgbm90aWNlLCB0aGlzIHBhcmFncmFwaCBhbmQgdGhlIGZvbGxvd2luZyB0aHJlZSBwYXJhZ3JhcGhzXG4gKiBhcHBlYXIgaW4gYWxsIGNvcGllcy4gUGVybWlzc2lvbiB0byBtYWtlIHVzZSBvZiB0aGlzIHNvZnR3YXJlIGZvciBvdGhlciB0aGFuXG4gKiBhY2FkZW1pYyByZXNlYXJjaCBhbmQgZWR1Y2F0aW9uIHB1cnBvc2VzIG1heSBiZSBvYnRhaW5lZCBieSBjb250YWN0aW5nOlxuICpcbiAqIE9mZmljZSBvZiBJbm5vdmF0aW9uIGFuZCBDb21tZXJjaWFsaXphdGlvblxuICogOTUwMCBHaWxtYW4gRHJpdmUsIE1haWwgQ29kZSAwOTEwXG4gKiBVbml2ZXJzaXR5IG9mIENhbGlmb3JuaWFcbiAqIExhIEpvbGxhLCBDQSA5MjA5My0wOTEwXG4gKiAoODU4KSA1MzQtNTgxNVxuICogaW52ZW50QHVjc2QuZWR1XG4gKlxuICogVGhpcyBzb2Z0d2FyZSBwcm9ncmFtIGFuZCBkb2N1bWVudGF0aW9uIGFyZSBjb3B5cmlnaHRlZCBieSBUaGUgUmVnZW50cyBvZiB0aGVcbiAqIFVuaXZlcnNpdHkgb2YgQ2FsaWZvcm5pYS4gVGhlIHNvZnR3YXJlIHByb2dyYW0gYW5kIGRvY3VtZW50YXRpb24gYXJlIHN1cHBsaWVkXG4gKiBcImFzIGlzXCIsIHdpdGhvdXQgYW55IGFjY29tcGFueWluZyBzZXJ2aWNlcyBmcm9tIFRoZSBSZWdlbnRzLiBUaGUgUmVnZW50cyBkb2VzXG4gKiBub3Qgd2FycmFudCB0aGF0IHRoZSBvcGVyYXRpb24gb2YgdGhlIHByb2dyYW0gd2lsbCBiZSB1bmludGVycnVwdGVkIG9yXG4gKiBlcnJvci1mcmVlLiBUaGUgZW5kLXVzZXIgdW5kZXJzdGFuZHMgdGhhdCB0aGUgcHJvZ3JhbSB3YXMgZGV2ZWxvcGVkIGZvciByZXNlYXJjaFxuICogcHVycG9zZXMgYW5kIGlzIGFkdmlzZWQgbm90IHRvIHJlbHkgZXhjbHVzaXZlbHkgb24gdGhlIHByb2dyYW0gZm9yIGFueSByZWFzb24uXG4gKlxuICogSU4gTk8gRVZFTlQgU0hBTEwgVEhFIFVOSVZFUlNJVFkgT0YgQ0FMSUZPUk5JQSBCRSBMSUFCTEUgVE8gQU5ZIFBBUlRZIEZPUlxuICogRElSRUNULCBJTkRJUkVDVCwgU1BFQ0lBTCwgSU5DSURFTlRBTCwgT1IgQ09OU0VRVUVOVElBTCBEQU1BR0VTLCBJTkNMVURJTkcgTE9TVFxuICogUFJPRklUUywgQVJJU0lORyBPVVQgT0YgVEhFIFVTRSBPRiBUSElTIFNPRlRXQVJFIEFORCBJVFMgRE9DVU1FTlRBVElPTiwgRVZFTiBJRlxuICogVEhFIFVOSVZFUlNJVFkgT0YgQ0FMSUZPUk5JQSBIQVMgQkVFTiBBRFZJU0VEIE9GIFRIRSBQT1NTSUJJTElUWSBPRiBTVUNIXG4gKiBEQU1BR0UuIFRIRSBVTklWRVJTSVRZIE9GIENBTElGT1JOSUEgU1BFQ0lGSUNBTExZIERJU0NMQUlNUyBBTlkgV0FSUkFOVElFUyxcbiAqIElOQ0xVRElORywgQlVUIE5PVCBMSU1JVEVEIFRPLCBUSEUgSU1QTElFRCBXQVJSQU5USUVTIE9GIE1FUkNIQU5UQUJJTElUWSBBTkRcbiAqIEZJVE5FU1MgRk9SIEEgUEFSVElDVUxBUiBQVVJQT1NFLiBUSEUgU09GVFdBUkUgUFJPVklERUQgSEVSRVVOREVSIElTIE9OIEFOIFwiQVNcbiAqIElTXCIgQkFTSVMsIEFORCBUSEUgVU5JVkVSU0lUWSBPRiBDQUxJRk9STklBIEhBUyBOTyBPQkxJR0FUSU9OUyBUTyBQUk9WSURFXG4gKiBNQUlOVEVOQU5DRSwgU1VQUE9SVCwgVVBEQVRFUywgRU5IQU5DRU1FTlRTLCBPUiBNT0RJRklDQVRJT05TLlxuICovXG4uY2FyZCB7XG4gIGJhY2tncm91bmQtY29sb3I6ICNmZmY7XG4gIGJveC1zaGFkb3c6IDAgMXB4IDJweCAjOUY5RDlEO1xuICBib3JkZXItcmFkaXVzOiAwLjVyZW07XG4gIHBhZGRpbmc6IDAgMnJlbSAycmVtO1xuICBoZWlnaHQ6IDI1cmVtO1xuICB3aWR0aDogMjVyZW07IH1cbiAgLmNhcmRfX2xpbmsge1xuICAgIGNvbG9yOiAjMDAwO1xuICAgIHRleHQtZGVjb3JhdGlvbjogbm9uZTsgfVxuICAuY2FyZF9fbG9nbyB7XG4gICAgaGVpZ2h0OiAxOHJlbTtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7IH1cbiAgICAuY2FyZF9fbG9nby1pY29uIHtcbiAgICAgIG1heC13aWR0aDogMThyZW07XG4gICAgICBtYXgtaGVpZ2h0OiAxNXJlbTsgfVxuICAgICAgLmNhcmRfX2xvZ28taWNvbi0tZ2F0ZWNoIHtcbiAgICAgICAgbWF4LXdpZHRoOiAyOHJlbSAhaW1wb3J0YW50O1xuICAgICAgICBtYXgtaGVpZ2h0OiAyNXJlbSAhaW1wb3J0YW50OyB9XG4gIC5jYXJkX19jb250ZW50IHtcbiAgICBmb250LXNpemU6IDEuMnJlbTtcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7IH1cbiAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChtYXgtd2lkdGg6IDY0ZW0pIHtcbiAgICAgIC5jYXJkX19jb250ZW50IHtcbiAgICAgICAgaGVpZ2h0OiAxNXJlbTtcbiAgICAgICAgdGV4dC1hbGlnbjogY2VudGVyO1xuICAgICAgICBmb250LXNpemU6IDEuM3JlbTsgfSB9XG4gICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiA0MGVtKSB7XG4gICAgICAuY2FyZF9fY29udGVudCB7XG4gICAgICAgIGhlaWdodDogYXV0bzsgfSB9XG4gICAgLmNhcmRfX2NvbnRlbnQtbGluazpsaW5rLCAuY2FyZF9fY29udGVudC1saW5rOnZpc2l0ZWQge1xuICAgICAgY29sb3I6ICM1ODk5QUU7XG4gICAgICBmb250LXdlaWdodDogNzAwO1xuICAgICAgdGV4dC1kZWNvcmF0aW9uOiBub25lO1xuICAgICAgcGFkZGluZy1ib3R0b206IDJweDtcbiAgICAgIG1hcmdpbi1ib3R0b206IDFweDtcbiAgICAgIGJhY2tncm91bmQ6IGxpbmVhci1ncmFkaWVudCgxNzVkZWcsICM3RkI3Q0EgMCUsICM3RkI3Q0EgMzMuMyUsICM1ODk5QUUgODMuNSUsICMyODZGODYgMTAwJSkgbGVmdCBib3R0b20gdHJhbnNwYXJlbnQgbm8tcmVwZWF0O1xuICAgICAgYmFja2dyb3VuZC1zaXplOiAxMDAlIDA7XG4gICAgICAvKiBjb250cm9scyB1bmRlcmxpbmUgdGhpY2tuZXNzICovXG4gICAgICB0cmFuc2l0aW9uOiBlYXNlLWluLW91dCAwLjNzOyB9XG4gICAgICAuY2FyZF9fY29udGVudC1saW5rOmxpbms6aG92ZXIsIC5jYXJkX19jb250ZW50LWxpbms6dmlzaXRlZDpob3ZlciB7XG4gICAgICAgIGJhY2tncm91bmQtc2l6ZTogMTAwJSAycHg7IH1cblxuLnBhcnRuZXJzIHtcbiAgbWFyZ2luLXRvcDogMnJlbTsgfVxuICAucGFydG5lcnMgLmNvbC0xLW9mLTEge1xuICAgIGRpc3BsYXk6IGZsZXg7IH1cbiAgLnBhcnRuZXJzIC5jb2wtMS1vZi0zIHtcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgICBtYXJnaW4tYm90dG9tOiAycmVtO1xuICAgIHBhZGRpbmc6IDAgMnJlbSAycmVtOyB9XG4gICAgLnBhcnRuZXJzIC5jb2wtMS1vZi0zOm50aC1jaGlsZCgzbiAtIDIpIHtcbiAgICAgIG1hcmdpbi1yaWdodDogMDsgfVxuICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiA2NGVtKSB7XG4gICAgICAgIC5wYXJ0bmVycyAuY29sLTEtb2YtMzpudGgtY2hpbGQoM24gLSAyKSB7XG4gICAgICAgICAgbWFyZ2luLXJpZ2h0OiAyLjVyZW07IH0gfVxuICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG1heC13aWR0aDogNjRlbSkge1xuICAgICAgLnBhcnRuZXJzIC5jb2wtMS1vZi0zIHtcbiAgICAgICAgd2lkdGg6IGNhbGMoNTAlIC0gMi41cmVtKSAhaW1wb3J0YW50OyB9IH1cbiAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChtYXgtd2lkdGg6IDQwZW0pIHtcbiAgICAgIC5wYXJ0bmVycyAuY29sLTEtb2YtMyB7XG4gICAgICAgIHdpZHRoOiAxMDAlICFpbXBvcnRhbnQ7IH0gfVxuICAucGFydG5lcnMgLnNlY3Rpb24taGVhZGVyIHtcbiAgICBtYXJnaW4tYm90dG9tOiAycmVtOyB9XG5cbi8qIVxuICogVGhpcyBzb2Z0d2FyZSBpcyBDb3B5cmlnaHQgKGMpIDIwMTUgVGhlIFJlZ2VudHMgb2YgdGhlIFVuaXZlcnNpdHkgb2ZcbiAqIENhbGlmb3JuaWEuIEFsbCBSaWdodHMgUmVzZXJ2ZWQuIFBlcm1pc3Npb24gdG8gY29weSwgbW9kaWZ5LCBhbmQgZGlzdHJpYnV0ZSB0aGlzXG4gKiBzb2Z0d2FyZSBhbmQgaXRzIGRvY3VtZW50YXRpb24gZm9yIGFjYWRlbWljIHJlc2VhcmNoIGFuZCBlZHVjYXRpb24gcHVycG9zZXMsXG4gKiB3aXRob3V0IGZlZSwgYW5kIHdpdGhvdXQgYSB3cml0dGVuIGFncmVlbWVudCBpcyBoZXJlYnkgZ3JhbnRlZCwgcHJvdmlkZWQgdGhhdFxuICogdGhlIGFib3ZlIGNvcHlyaWdodCBub3RpY2UsIHRoaXMgcGFyYWdyYXBoIGFuZCB0aGUgZm9sbG93aW5nIHRocmVlIHBhcmFncmFwaHNcbiAqIGFwcGVhciBpbiBhbGwgY29waWVzLiBQZXJtaXNzaW9uIHRvIG1ha2UgdXNlIG9mIHRoaXMgc29mdHdhcmUgZm9yIG90aGVyIHRoYW5cbiAqIGFjYWRlbWljIHJlc2VhcmNoIGFuZCBlZHVjYXRpb24gcHVycG9zZXMgbWF5IGJlIG9idGFpbmVkIGJ5IGNvbnRhY3Rpbmc6XG4gKlxuICogT2ZmaWNlIG9mIElubm92YXRpb24gYW5kIENvbW1lcmNpYWxpemF0aW9uXG4gKiA5NTAwIEdpbG1hbiBEcml2ZSwgTWFpbCBDb2RlIDA5MTBcbiAqIFVuaXZlcnNpdHkgb2YgQ2FsaWZvcm5pYVxuICogTGEgSm9sbGEsIENBIDkyMDkzLTA5MTBcbiAqICg4NTgpIDUzNC01ODE1XG4gKiBpbnZlbnRAdWNzZC5lZHVcbiAqXG4gKiBUaGlzIHNvZnR3YXJlIHByb2dyYW0gYW5kIGRvY3VtZW50YXRpb24gYXJlIGNvcHlyaWdodGVkIGJ5IFRoZSBSZWdlbnRzIG9mIHRoZVxuICogVW5pdmVyc2l0eSBvZiBDYWxpZm9ybmlhLiBUaGUgc29mdHdhcmUgcHJvZ3JhbSBhbmQgZG9jdW1lbnRhdGlvbiBhcmUgc3VwcGxpZWRcbiAqIFwiYXMgaXNcIiwgd2l0aG91dCBhbnkgYWNjb21wYW55aW5nIHNlcnZpY2VzIGZyb20gVGhlIFJlZ2VudHMuIFRoZSBSZWdlbnRzIGRvZXNcbiAqIG5vdCB3YXJyYW50IHRoYXQgdGhlIG9wZXJhdGlvbiBvZiB0aGUgcHJvZ3JhbSB3aWxsIGJlIHVuaW50ZXJydXB0ZWQgb3JcbiAqIGVycm9yLWZyZWUuIFRoZSBlbmQtdXNlciB1bmRlcnN0YW5kcyB0aGF0IHRoZSBwcm9ncmFtIHdhcyBkZXZlbG9wZWQgZm9yIHJlc2VhcmNoXG4gKiBwdXJwb3NlcyBhbmQgaXMgYWR2aXNlZCBub3QgdG8gcmVseSBleGNsdXNpdmVseSBvbiB0aGUgcHJvZ3JhbSBmb3IgYW55IHJlYXNvbi5cbiAqXG4gKiBJTiBOTyBFVkVOVCBTSEFMTCBUSEUgVU5JVkVSU0lUWSBPRiBDQUxJRk9STklBIEJFIExJQUJMRSBUTyBBTlkgUEFSVFkgRk9SXG4gKiBESVJFQ1QsIElORElSRUNULCBTUEVDSUFMLCBJTkNJREVOVEFMLCBPUiBDT05TRVFVRU5USUFMIERBTUFHRVMsIElOQ0xVRElORyBMT1NUXG4gKiBQUk9GSVRTLCBBUklTSU5HIE9VVCBPRiBUSEUgVVNFIE9GIFRISVMgU09GVFdBUkUgQU5EIElUUyBET0NVTUVOVEFUSU9OLCBFVkVOIElGXG4gKiBUSEUgVU5JVkVSU0lUWSBPRiBDQUxJRk9STklBIEhBUyBCRUVOIEFEVklTRUQgT0YgVEhFIFBPU1NJQklMSVRZIE9GIFNVQ0hcbiAqIERBTUFHRS4gVEhFIFVOSVZFUlNJVFkgT0YgQ0FMSUZPUk5JQSBTUEVDSUZJQ0FMTFkgRElTQ0xBSU1TIEFOWSBXQVJSQU5USUVTLFxuICogSU5DTFVESU5HLCBCVVQgTk9UIExJTUlURUQgVE8sIFRIRSBJTVBMSUVEIFdBUlJBTlRJRVMgT0YgTUVSQ0hBTlRBQklMSVRZIEFORFxuICogRklUTkVTUyBGT1IgQSBQQVJUSUNVTEFSIFBVUlBPU0UuIFRIRSBTT0ZUV0FSRSBQUk9WSURFRCBIRVJFVU5ERVIgSVMgT04gQU4gXCJBU1xuICogSVNcIiBCQVNJUywgQU5EIFRIRSBVTklWRVJTSVRZIE9GIENBTElGT1JOSUEgSEFTIE5PIE9CTElHQVRJT05TIFRPIFBST1ZJREVcbiAqIE1BSU5URU5BTkNFLCBTVVBQT1JULCBVUERBVEVTLCBFTkhBTkNFTUVOVFMsIE9SIE1PRElGSUNBVElPTlMuXG4gKi9cbi8qXG5TRUFSQ0ggQkFSXG4gKi9cbi5zZWFyY2gtYmFyIHtcbiAgZGlzcGxheTogZmxleDtcbiAgZm9udC1zaXplOiAxNnB4O1xuICB3aWR0aDogMTAwJTsgfVxuXG4uc2VhcmNoLWJhcl9fY29tcG9uZW50IHtcbiAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xuICBtYXJnaW46IDEwcHg7XG4gIHdpZHRoOiBhdXRvOyB9XG5cbi5zZWFyY2gtYmFyX19sYWJlbCB7XG4gIGRpc3BsYXk6IGJsb2NrOyB9XG5cbi5zZWFyY2gtYmFyX19jb21wb25lbnQge1xuICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIG1hcmdpbjogNXB4O1xuICB3aWR0aDogYXV0bzsgfVxuXG4uc2VhcmNoLWJhcl9fbGFiZWwge1xuICBkaXNwbGF5OiBibG9jazsgfVxuXG4uc2VhcmNoLWJhcl9fdGltZSB7XG4gIHdpZHRoOiA1MDBweDtcbiAgZGlzcGxheTogZmxleDtcbiAganVzdGlmeS1jb250ZW50OiBzcGFjZS1iZXR3ZWVuOyB9XG5cbi5jYWxlbmRhci1pY29uIHtcbiAgZm9udC1zaXplOiAxNXB4O1xuICBtYXJnaW46IDVweDsgfVxuXG4uc2VhcmNoLWJhcl9fZmxleCB7XG4gIGRpc3BsYXk6IGZsZXg7IH1cblxuLnNlYXJjaC1iYXJfX3RpbWUtaW5wdXQge1xuICB3aWR0aDogMzgwcHg7IH1cblxuLnNlYXJjaC1iYXJfX3RpbWUtaWNvbiB7XG4gIG1hcmdpbi1yaWdodDogMTBweDsgfVxuXG4uc2VhcmNoLWJhcl9fc2VhcmNoLWlucHV0IHtcbiAgd2lkdGg6IDgwJSAhaW1wb3J0YW50O1xuICBtYXJnaW46IDNweDsgfVxuXG4vKiFcbiAqIFRoaXMgc29mdHdhcmUgaXMgQ29weXJpZ2h0IChjKSAyMDE1IFRoZSBSZWdlbnRzIG9mIHRoZSBVbml2ZXJzaXR5IG9mXG4gKiBDYWxpZm9ybmlhLiBBbGwgUmlnaHRzIFJlc2VydmVkLiBQZXJtaXNzaW9uIHRvIGNvcHksIG1vZGlmeSwgYW5kIGRpc3RyaWJ1dGUgdGhpc1xuICogc29mdHdhcmUgYW5kIGl0cyBkb2N1bWVudGF0aW9uIGZvciBhY2FkZW1pYyByZXNlYXJjaCBhbmQgZWR1Y2F0aW9uIHB1cnBvc2VzLFxuICogd2l0aG91dCBmZWUsIGFuZCB3aXRob3V0IGEgd3JpdHRlbiBhZ3JlZW1lbnQgaXMgaGVyZWJ5IGdyYW50ZWQsIHByb3ZpZGVkIHRoYXRcbiAqIHRoZSBhYm92ZSBjb3B5cmlnaHQgbm90aWNlLCB0aGlzIHBhcmFncmFwaCBhbmQgdGhlIGZvbGxvd2luZyB0aHJlZSBwYXJhZ3JhcGhzXG4gKiBhcHBlYXIgaW4gYWxsIGNvcGllcy4gUGVybWlzc2lvbiB0byBtYWtlIHVzZSBvZiB0aGlzIHNvZnR3YXJlIGZvciBvdGhlciB0aGFuXG4gKiBhY2FkZW1pYyByZXNlYXJjaCBhbmQgZWR1Y2F0aW9uIHB1cnBvc2VzIG1heSBiZSBvYnRhaW5lZCBieSBjb250YWN0aW5nOlxuICpcbiAqIE9mZmljZSBvZiBJbm5vdmF0aW9uIGFuZCBDb21tZXJjaWFsaXphdGlvblxuICogOTUwMCBHaWxtYW4gRHJpdmUsIE1haWwgQ29kZSAwOTEwXG4gKiBVbml2ZXJzaXR5IG9mIENhbGlmb3JuaWFcbiAqIExhIEpvbGxhLCBDQSA5MjA5My0wOTEwXG4gKiAoODU4KSA1MzQtNTgxNVxuICogaW52ZW50QHVjc2QuZWR1XG4gKlxuICogVGhpcyBzb2Z0d2FyZSBwcm9ncmFtIGFuZCBkb2N1bWVudGF0aW9uIGFyZSBjb3B5cmlnaHRlZCBieSBUaGUgUmVnZW50cyBvZiB0aGVcbiAqIFVuaXZlcnNpdHkgb2YgQ2FsaWZvcm5pYS4gVGhlIHNvZnR3YXJlIHByb2dyYW0gYW5kIGRvY3VtZW50YXRpb24gYXJlIHN1cHBsaWVkXG4gKiBcImFzIGlzXCIsIHdpdGhvdXQgYW55IGFjY29tcGFueWluZyBzZXJ2aWNlcyBmcm9tIFRoZSBSZWdlbnRzLiBUaGUgUmVnZW50cyBkb2VzXG4gKiBub3Qgd2FycmFudCB0aGF0IHRoZSBvcGVyYXRpb24gb2YgdGhlIHByb2dyYW0gd2lsbCBiZSB1bmludGVycnVwdGVkIG9yXG4gKiBlcnJvci1mcmVlLiBUaGUgZW5kLXVzZXIgdW5kZXJzdGFuZHMgdGhhdCB0aGUgcHJvZ3JhbSB3YXMgZGV2ZWxvcGVkIGZvciByZXNlYXJjaFxuICogcHVycG9zZXMgYW5kIGlzIGFkdmlzZWQgbm90IHRvIHJlbHkgZXhjbHVzaXZlbHkgb24gdGhlIHByb2dyYW0gZm9yIGFueSByZWFzb24uXG4gKlxuICogSU4gTk8gRVZFTlQgU0hBTEwgVEhFIFVOSVZFUlNJVFkgT0YgQ0FMSUZPUk5JQSBCRSBMSUFCTEUgVE8gQU5ZIFBBUlRZIEZPUlxuICogRElSRUNULCBJTkRJUkVDVCwgU1BFQ0lBTCwgSU5DSURFTlRBTCwgT1IgQ09OU0VRVUVOVElBTCBEQU1BR0VTLCBJTkNMVURJTkcgTE9TVFxuICogUFJPRklUUywgQVJJU0lORyBPVVQgT0YgVEhFIFVTRSBPRiBUSElTIFNPRlRXQVJFIEFORCBJVFMgRE9DVU1FTlRBVElPTiwgRVZFTiBJRlxuICogVEhFIFVOSVZFUlNJVFkgT0YgQ0FMSUZPUk5JQSBIQVMgQkVFTiBBRFZJU0VEIE9GIFRIRSBQT1NTSUJJTElUWSBPRiBTVUNIXG4gKiBEQU1BR0UuIFRIRSBVTklWRVJTSVRZIE9GIENBTElGT1JOSUEgU1BFQ0lGSUNBTExZIERJU0NMQUlNUyBBTlkgV0FSUkFOVElFUyxcbiAqIElOQ0xVRElORywgQlVUIE5PVCBMSU1JVEVEIFRPLCBUSEUgSU1QTElFRCBXQVJSQU5USUVTIE9GIE1FUkNIQU5UQUJJTElUWSBBTkRcbiAqIEZJVE5FU1MgRk9SIEEgUEFSVElDVUxBUiBQVVJQT1NFLiBUSEUgU09GVFdBUkUgUFJPVklERUQgSEVSRVVOREVSIElTIE9OIEFOIFwiQVNcbiAqIElTXCIgQkFTSVMsIEFORCBUSEUgVU5JVkVSU0lUWSBPRiBDQUxJRk9STklBIEhBUyBOTyBPQkxJR0FUSU9OUyBUTyBQUk9WSURFXG4gKiBNQUlOVEVOQU5DRSwgU1VQUE9SVCwgVVBEQVRFUywgRU5IQU5DRU1FTlRTLCBPUiBNT0RJRklDQVRJT05TLlxuICovXG5ib2R5IHtcbiAgZm9udC1zaXplOiAxNHB4ICFpbXBvcnRhbnQ7IH1cblxuI2hpamFja3MgLmdyaXAtYnRuIHtcbiAgY29sb3I6ICMzMzM7XG4gIGJhY2tncm91bmQtY29sb3I6ICNmZmY7XG4gIGJvcmRlci1jb2xvcjogI2NjYztcbiAgbWFyZ2luLXJpZ2h0OiAwLjVyZW07IH1cblxuLmJ0biB7XG4gIGRpc3BsYXk6IGlubGluZS1ibG9jaztcbiAgcGFkZGluZzogNnB4IDEycHg7XG4gIG1hcmdpbi1ib3R0b206IDA7XG4gIGZvbnQtc2l6ZTogMTRweCAhaW1wb3J0YW50O1xuICBmb250LXdlaWdodDogNDAwO1xuICBsaW5lLWhlaWdodDogMS40Mjg1NzE0MztcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xuICB3aGl0ZS1zcGFjZTogbm93cmFwO1xuICB2ZXJ0aWNhbC1hbGlnbjogbWlkZGxlO1xuICAtbXMtdG91Y2gtYWN0aW9uOiBtYW5pcHVsYXRpb247XG4gIHRvdWNoLWFjdGlvbjogbWFuaXB1bGF0aW9uO1xuICBjdXJzb3I6IHBvaW50ZXI7XG4gIC13ZWJraXQtdXNlci1zZWxlY3Q6IG5vbmU7XG4gIC1tb3otdXNlci1zZWxlY3Q6IG5vbmU7XG4gIC1tcy11c2VyLXNlbGVjdDogbm9uZTtcbiAgdXNlci1zZWxlY3Q6IG5vbmU7XG4gIGJhY2tncm91bmQtaW1hZ2U6IG5vbmU7XG4gIGJvcmRlci1yYWRpdXM6IDRweDsgfVxuXG4uYnRuLWdyb3VwID4gLmJ0biBpbnB1dFt0eXBlPVwicmFkaW9cIl0ge1xuICBjbGlwOiByZWN0KDAsIDAsIDAsIDApO1xuICBwb2ludGVyLWV2ZW50czogbm9uZTsgfVxuXG4uZm9ybS1jb250cm9sIHtcbiAgZm9udC1zaXplOiAxNHB4ICFpbXBvcnRhbnQ7IH1cblxuLmJhZGdlIHtcbiAgZm9udC1zaXplOiA5MCUgIWltcG9ydGFudDtcbiAgbWFyZ2luOiA1cHg7IH1cblxuLypcblRBR1NcbiAqL1xuLnRhZy1saXN0IHtcbiAgbWFyZ2luOiA1cHg7IH1cblxuLnRhZy1sYWJlbCB7XG4gIGZvbnQtc2l6ZTogMTAwJTtcbiAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xuICBtYXJnaW4taW5saW5lLWVuZDogNXB4O1xuICBtYXJnaW4tdG9wOiA1cHg7XG4gIG1hcmdpbi1ib3R0b206IDVweDsgfVxuXG4uYXNuX19jb3VudHJ5IHtcbiAgd2hpdGUtc3BhY2U6IG5vd3JhcDsgfVxuXG4uaXBwcmVmaXhfX3NwYW4ge1xuICBtYXJnaW4tcmlnaHQ6IDVweDsgfVxuXG4udGFnLWljb24ge1xuICBtYXJnaW4tcmlnaHQ6IDVweDsgfVxuXG4vKiFcbiAqIFRoaXMgc29mdHdhcmUgaXMgQ29weXJpZ2h0IChjKSAyMDE1IFRoZSBSZWdlbnRzIG9mIHRoZSBVbml2ZXJzaXR5IG9mXG4gKiBDYWxpZm9ybmlhLiBBbGwgUmlnaHRzIFJlc2VydmVkLiBQZXJtaXNzaW9uIHRvIGNvcHksIG1vZGlmeSwgYW5kIGRpc3RyaWJ1dGUgdGhpc1xuICogc29mdHdhcmUgYW5kIGl0cyBkb2N1bWVudGF0aW9uIGZvciBhY2FkZW1pYyByZXNlYXJjaCBhbmQgZWR1Y2F0aW9uIHB1cnBvc2VzLFxuICogd2l0aG91dCBmZWUsIGFuZCB3aXRob3V0IGEgd3JpdHRlbiBhZ3JlZW1lbnQgaXMgaGVyZWJ5IGdyYW50ZWQsIHByb3ZpZGVkIHRoYXRcbiAqIHRoZSBhYm92ZSBjb3B5cmlnaHQgbm90aWNlLCB0aGlzIHBhcmFncmFwaCBhbmQgdGhlIGZvbGxvd2luZyB0aHJlZSBwYXJhZ3JhcGhzXG4gKiBhcHBlYXIgaW4gYWxsIGNvcGllcy4gUGVybWlzc2lvbiB0byBtYWtlIHVzZSBvZiB0aGlzIHNvZnR3YXJlIGZvciBvdGhlciB0aGFuXG4gKiBhY2FkZW1pYyByZXNlYXJjaCBhbmQgZWR1Y2F0aW9uIHB1cnBvc2VzIG1heSBiZSBvYnRhaW5lZCBieSBjb250YWN0aW5nOlxuICpcbiAqIE9mZmljZSBvZiBJbm5vdmF0aW9uIGFuZCBDb21tZXJjaWFsaXphdGlvblxuICogOTUwMCBHaWxtYW4gRHJpdmUsIE1haWwgQ29kZSAwOTEwXG4gKiBVbml2ZXJzaXR5IG9mIENhbGlmb3JuaWFcbiAqIExhIEpvbGxhLCBDQSA5MjA5My0wOTEwXG4gKiAoODU4KSA1MzQtNTgxNVxuICogaW52ZW50QHVjc2QuZWR1XG4gKlxuICogVGhpcyBzb2Z0d2FyZSBwcm9ncmFtIGFuZCBkb2N1bWVudGF0aW9uIGFyZSBjb3B5cmlnaHRlZCBieSBUaGUgUmVnZW50cyBvZiB0aGVcbiAqIFVuaXZlcnNpdHkgb2YgQ2FsaWZvcm5pYS4gVGhlIHNvZnR3YXJlIHByb2dyYW0gYW5kIGRvY3VtZW50YXRpb24gYXJlIHN1cHBsaWVkXG4gKiBcImFzIGlzXCIsIHdpdGhvdXQgYW55IGFjY29tcGFueWluZyBzZXJ2aWNlcyBmcm9tIFRoZSBSZWdlbnRzLiBUaGUgUmVnZW50cyBkb2VzXG4gKiBub3Qgd2FycmFudCB0aGF0IHRoZSBvcGVyYXRpb24gb2YgdGhlIHByb2dyYW0gd2lsbCBiZSB1bmludGVycnVwdGVkIG9yXG4gKiBlcnJvci1mcmVlLiBUaGUgZW5kLXVzZXIgdW5kZXJzdGFuZHMgdGhhdCB0aGUgcHJvZ3JhbSB3YXMgZGV2ZWxvcGVkIGZvciByZXNlYXJjaFxuICogcHVycG9zZXMgYW5kIGlzIGFkdmlzZWQgbm90IHRvIHJlbHkgZXhjbHVzaXZlbHkgb24gdGhlIHByb2dyYW0gZm9yIGFueSByZWFzb24uXG4gKlxuICogSU4gTk8gRVZFTlQgU0hBTEwgVEhFIFVOSVZFUlNJVFkgT0YgQ0FMSUZPUk5JQSBCRSBMSUFCTEUgVE8gQU5ZIFBBUlRZIEZPUlxuICogRElSRUNULCBJTkRJUkVDVCwgU1BFQ0lBTCwgSU5DSURFTlRBTCwgT1IgQ09OU0VRVUVOVElBTCBEQU1BR0VTLCBJTkNMVURJTkcgTE9TVFxuICogUFJPRklUUywgQVJJU0lORyBPVVQgT0YgVEhFIFVTRSBPRiBUSElTIFNPRlRXQVJFIEFORCBJVFMgRE9DVU1FTlRBVElPTiwgRVZFTiBJRlxuICogVEhFIFVOSVZFUlNJVFkgT0YgQ0FMSUZPUk5JQSBIQVMgQkVFTiBBRFZJU0VEIE9GIFRIRSBQT1NTSUJJTElUWSBPRiBTVUNIXG4gKiBEQU1BR0UuIFRIRSBVTklWRVJTSVRZIE9GIENBTElGT1JOSUEgU1BFQ0lGSUNBTExZIERJU0NMQUlNUyBBTlkgV0FSUkFOVElFUyxcbiAqIElOQ0xVRElORywgQlVUIE5PVCBMSU1JVEVEIFRPLCBUSEUgSU1QTElFRCBXQVJSQU5USUVTIE9GIE1FUkNIQU5UQUJJTElUWSBBTkRcbiAqIEZJVE5FU1MgRk9SIEEgUEFSVElDVUxBUiBQVVJQT1NFLiBUSEUgU09GVFdBUkUgUFJPVklERUQgSEVSRVVOREVSIElTIE9OIEFOIFwiQVNcbiAqIElTXCIgQkFTSVMsIEFORCBUSEUgVU5JVkVSU0lUWSBPRiBDQUxJRk9STklBIEhBUyBOTyBPQkxJR0FUSU9OUyBUTyBQUk9WSURFXG4gKiBNQUlOVEVOQU5DRSwgU1VQUE9SVCwgVVBEQVRFUywgRU5IQU5DRU1FTlRTLCBPUiBNT0RJRklDQVRJT05TLlxuICovXG4jc2Fua2V5X2RpdiB7XG4gIG1hcmdpbi10b3A6IDJyZW07XG4gIHdpZHRoOiAxMDAlOyB9XG4gICNzYW5rZXlfZGl2ICNjaGFydF9kaXYge1xuICAgIHBhZGRpbmc6IDJyZW0gNSUgIWltcG9ydGFudDtcbiAgICBkaXNwbGF5OiBibG9jaztcbiAgICB3aWR0aDogMTAwJTsgfVxuIl19 */

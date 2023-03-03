@@ -113,7 +113,7 @@ class SankeyGraph extends React.Component {
      * convert list of paths, each is a list of asn, into a json object for nivo sankey
      * @param paths
      */
-    prepareData = (paths) => {
+    prepareData = (paths, pathAsn) => {
         let links = this._count_links(paths, this.props.benign_nodes, this.props.suspicious_nodes);
         let resData = [];
         let weight_sum = 0;
@@ -141,8 +141,12 @@ class SankeyGraph extends React.Component {
                         style = "color:red";
                     }
                 }
-                resData.push([as1, as2, weight, style]);
-                weight_sum += weight;
+                if (as1 === pathAsn || as2 === pathAsn) {
+                    resData.push([as1, as2, weight, style]);
+                    weight_sum += weight;
+                }
+                // resData.push([as1, as2, weight, style]);
+                // weight_sum += weight;
             }
         );
         return resData;
@@ -173,7 +177,7 @@ class SankeyGraph extends React.Component {
                 </div>
             )
         } else {
-            let data = this.prepareData(this.state.data);
+            let data = this.prepareData(this.state.data, this.props.pathAsn);
             return (
 
                 <div id="sankey_div">

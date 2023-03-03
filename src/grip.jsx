@@ -57,8 +57,8 @@ const App = () => {
         <Nav/>
         <Switch>
             {/* page routes */}
-            <Route path='/events/:eventType/:eventId/:pfxEventId' component={PfxEventDetails}/>
-            <Route path='/events/:eventType/:eventId' component={EventDetails}/>
+            <Route path='/events/:eventType/:eventId/:pfxEventId/:pathAsn' component={PfxEventDetails}/>
+            <Route path='/events/:eventType/:eventId/:pathAsn' component={EventDetails}/>
             <Route path='/method' component={Methodology}/>
             <Route path='/repos' component={CodeRepos}/>
             <Route path='/ack' component={Acknowledgement}/>

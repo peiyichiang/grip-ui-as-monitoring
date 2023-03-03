@@ -100,7 +100,7 @@ class PfxEventsTable extends React.Component {
                 grow:2,
                 cell: row => {
 
-                    let url = `/events/${this.props.eventType}/${this.props.eventId}/${row.fingerprint}`;
+                    let url = `/events/${this.props.eventType}/${this.props.eventId}/${row.fingerprint}/${this.props.pathAsn}`;
                     return <PropertyTagsList tags={row.tags_dict} enableClick={this.props.enableClick} url={url}/>
                 }
             },
@@ -124,7 +124,7 @@ class PfxEventsTable extends React.Component {
                 width: "100px",
                 cell: row=>{
                     if(this.props.isEventDetails) {
-                        let url = `/events/${this.props.eventType}/${this.props.eventId}/${row.fingerprint}`;
+                        let url = `/events/${this.props.eventType}/${this.props.eventId}/${row.fingerprint}/${this.props.pathAsn}`;
                         return <LinkA type="button" className="btn btn-sm btn-primary grip-btn" to={url}>
                             Details
                         </LinkA>
@@ -189,7 +189,7 @@ class PfxEventsTable extends React.Component {
                 wrap: true,
                 grow:2,
                 cell: row => {
-                    let url = `/events/${this.props.eventType}/${this.props.eventId}/${row.fingerprint}`;
+                    let url = `/events/${this.props.eventType}/${this.props.eventId}/${row.fingerprint}/${this.props.pathAsn}`;
                     return <PropertyTagsList tags={row.tags_dict} enableClick={this.props.enableClick} url={url}/>
                 }
             },
@@ -214,7 +214,7 @@ class PfxEventsTable extends React.Component {
                 width: "100px",
                 cell: row=>{
                     if(this.props.isEventDetails) {
-                        let url = `/events/${this.props.eventType}/${this.props.eventId}/${row.fingerprint}`;
+                        let url = `/events/${this.props.eventType}/${this.props.eventId}/${row.fingerprint}/${this.props.pathAsn}`;
                         return <LinkA type="button" className="btn btn-sm btn-primary grip-btn" to={url}>
                             Details
                         </LinkA>
